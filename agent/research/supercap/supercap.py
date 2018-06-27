@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 # CC discharge
 # V(t) = v0 - ((t*i)/C)
 
-cc = 0.01               # Amps
-v_0 = 5                 # Volts
-c = [1, 10, 100, 220]   # mF
-t = range(0, 100000)    # milliseconds
+cc = 0.1                        # Amps
+v_0 = 5                         # Volts
+c = [1, 10, 100, 220, 4000]     # mF
+t = range(0, 100000)            # milliseconds
 
 for i in c:
     v = []
