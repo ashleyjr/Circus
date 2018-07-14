@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name circus_agent)(type KiCad)(uri ${KIPRJMOD}/circus_agent)(options "")(descr ""))
+  (lib (name circus)(type KiCad)(uri "$(KIPRJMOD)/circus.pretty")(options "")(descr ""))
 )
