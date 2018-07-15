@@ -1028,7 +1028,7 @@ Text Notes 850  2500 0    60   ~ 0
 Tune resistors for ADC input impedance
 Text GLabel 6450 5650 2    60   Output ~ 0
 nPWR_IR
-Text GLabel 6150 6200 2    60   Output ~ 0
+Text GLabel 6450 6050 2    60   Output ~ 0
 nPWR_ID
 $Comp
 L CRCW0402330RFKED R22
@@ -1643,7 +1643,7 @@ Wire Wire Line
 	4600 6250 4750 6250
 Text GLabel 6000 5950 2    60   Input ~ 0
 LEDR
-Text GLabel 6450 6050 2    60   Input ~ 0
+Text GLabel 6150 6200 2    60   Input ~ 0
 LEDG
 Wire Wire Line
 	6000 5950 5950 5950
