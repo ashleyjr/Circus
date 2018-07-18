@@ -1465,10 +1465,10 @@
       (net 48 "Net-(U1001-Pad1)"))
   )
 
-  (gr_line (start 49.6 179.8) (end 49.6 171.6) (angle 90) (layer Edge.Cuts) (width 0.15))
-  (gr_line (start 32.5 193.2) (end 37.2 193.2) (angle 90) (layer Edge.Cuts) (width 0.15))
-  (gr_line (start 20.2 179.3) (end 20.2 171.9) (angle 90) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 20.2 171.9) (end 20.2 179.3) (angle 90) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 49.6 171.9) (end 49.6 179.8) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_arc (start 33.3 180.1) (end 32.5 193.2) (angle 90) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 32.5 193.2) (end 37.2 193.2) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 22.2 169.4) (end 22.3 169.4) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 22.2 154.8) (end 22.2 169.4) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_arc (start 22.5 171.7) (end 20.2 171.9) (angle 90) (layer Edge.Cuts) (width 0.15))
