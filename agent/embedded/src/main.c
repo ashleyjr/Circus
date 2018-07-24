@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------------
-// Project: Switcher
+// Project: Circus/embedded
 // File: 	main.c
 // Brief:	Single main file containing all code
 //-----------------------------------------------------------------------------
@@ -18,31 +18,26 @@
 #define SYSCLK      		24500000   				// SYSCLK frequency in Hz
 #define BAUDRATE   		115200					// Baud rate of UART in bps
 //
-//#define UART_SIZE_IN		16
-#define UART_SIZE_OUT   16
-//
-//#define ADC1				0x08
-//#define ADC2				0x09
-//#define ADC3				0x0A
-//
-#define SCALE_MUL			6068					// When combined with >> 10 will scale by 5.926 to compensate for potential divider
-//
-//#define DEFAULT_OUT_MV		5000
-//#define DEFAULT_HIGH_MV		6000
-//#define DEFAULT_LOW_MV		4000
-//
-#define WAIT 100000
-#define ADC3            0x0A
+#define UART_SIZE_IN		8
+#define UART_SIZE_OUT   8
+#define ADC1				0x08
+#define ADC2				0x09
+#define ADC3				0x0A
 
-SBIT(LED1, SFR_P1, 0);                 			// DS5 P1.0 LED
-SBIT(LED0, SFR_P1, 1);                 			// DS5 P1.0 LED
+SBIT(LED1, SFR_P1, 0);                       // P1.0 LED
+SBIT(LED0, SFR_P1, 1);                 		// P1.1 LED
 
 //-----------------------------------------------------------------------------
 // Prototypes
 //-----------------------------------------------------------------------------
-
 void  setup(void);
+U8    uartRx();
+void  uartLoadIn(U8 rx);
 void  uartLoadOut(U8 tx);
+U8    uartSizeIn(void);
+void  uartTransmit(void);
+U16   readAdc(void);
+void  motorControl(void);
 
 //-----------------------------------------------------------------------------
 // Global Variables
@@ -54,28 +49,22 @@ volatile U16   motor_duty_left_rvr;
 volatile U16   motor_duty_right_fwd;
 volatile U16   motor_duty_right_rvr;
 
-//volatile U8 	uart_in[UART_SIZE_IN];
+volatile U8 	uart_in[UART_SIZE_IN];
+volatile U8 	in_head;
+volatile U8 	in_tail;
 volatile U8 	uart_out[UART_SIZE_OUT];
-volatile U8 	head;
-volatile U8 	tail;
+volatile U8 	out_head;
+volatile U8 	out_tail;
 
+volatile U8    tick;
 //-----------------------------------------------------------------------------
 // Main Routine
 //-----------------------------------------------------------------------------
-U16 readAdc(){                      // Read the available ADCs
-   U8 i;
-   ADC0MX = ADC3;
-   for(i=0;i<2;i++){
-      ADC0CN0 |= ADC0CN0_ADBUSY__SET;
-      while(ADC0CN0 & ADC0CN0_ADBUSY__SET);     // Wait for sample to complete
-   }
-   return (U16)ADC0;        // Scale to mV
-}
 
-void main (void){
-   //U32 i//;
-   U16 adc;
-   
+void main (void){ 
+  
+   volatile U8 data;
+
    motor_pwm_counter    = 0;
    motor_duty_left_fwd  = 0;
    motor_duty_left_rvr  = 0;
@@ -87,10 +76,12 @@ void main (void){
 	SCON0_TI 	= 1; 
 	SCON0_RI 	= 0;
   
-   tail = 0;
-   head = 0;
+   in_tail  = 0;
+   in_head  = 0;
+   out_tail = 0;
+   out_head = 0;
+   
 
-   //SBUF0 = 'A';
 
    LED0 = 0;
    LED1 = 0;
@@ -98,36 +89,30 @@ void main (void){
    uartLoadOut('E');	
    uartLoadOut('S');	
    uartLoadOut('T');	
+ 
+   tick = 0;
+   while (1){ 
+      if(SCON0_RI){   
+         SCON0_RI = 0;
+         data = SBUF0;
+         uartLoadIn(data); 
+         if('Q' == data){
+            while(uartSizeIn()){
+               uartLoadOut(uartRx());
+            }
+         }else{
+            uartLoadOut(uartSizeIn() + 48);
+         }
+      }
 
-   
-   
-   //EA = 1;
-	
-   while (1){
-      adc =  readAdc() >> 2;
-      motor_duty_left_fwd = adc;
-      motor_duty_right_fwd = 0x00FF - adc;
-      
-      //if(wait > 512){
-      //   LED0 = 1;
-      //}else{
-      //   LED0 = 0;
-      //}
-      
-      //for(i=0;i<WAIT;i++);
-      //LED0 = 0;
-      //LED1 = 1;
-      //for(i=0;i<WAIT;i++);
-      //LED0 = 1;
-      //LED1 = 0;
 
-      //uartLoadOut('A');	
-      //
-      //if(SCON0_RI){
-		//	SCON0_RI = 0;
-		//	uart_in[0] = SBUF0;
-		//	uartLoadOut(uart_in[0]);	
-      //} 
+      if(1 == tick){
+         motorControl(); 
+         uartTransmit();
+      }else{
+         // Sleep
+      }
+      tick = 0;
 	}
 } 
 
@@ -137,59 +122,115 @@ void main (void){
 
 INTERRUPT (TIMER1_ISR, TIMER1_IRQn){}				// Needed for UART timing	
 
-
-INTERRUPT (TIMER2_ISR, TIMER2_IRQn){				 
-   if(0 == motor_pwm_counter){
-      LED0 = 1;
-      LED1 = 1;
-   }
-   if(motor_duty_left_fwd == motor_pwm_counter){ 
-      LED0 = 0;
-   }
-   if(motor_duty_right_fwd == motor_pwm_counter){ 
-      LED1 = 0;
-   }
-   motor_pwm_counter = (motor_pwm_counter + 1) % 255;
-
-   //SBUF0 = 'A';
-   if(head != tail){
-      SBUF0 = uart_out[tail];                // Timer tuned so no need to check
-      tail++;                             // Transmit UART
-      tail %= UART_SIZE_OUT;                 // Wrap around
-   }
-   TMR2H = 255;                           // Runs at 4KHz
+INTERRUPT (TIMER2_ISR, TIMER2_IRQn){			   // Timer running at 4KHz 
+    
+   motor_pwm_counter = (motor_pwm_counter + 1) % 255; 
+   TMR2H = 255;                                 // Reset timer
    TMR2CN_TF2H = 0;
+   tick = 1;
 }
-
 
 //-----------------------------------------------------------------------------
 // Routines
 //-----------------------------------------------------------------------------
 
-void uartLoadOut(U8 tx){			      // Handle buffering out Tx UART
-	uart_out[head] = tx;	               // Buffer outgoing
-	head++;						
-	head %= UART_SIZE_OUT;				   // Wrap around
+
+
+
+
+
+
+// ATOI function needed
+
+
+
+
+
+
+
+
+U8 uartRx(){
+   U8 data = 0;
+   if(in_head != in_tail){
+      data = uart_in[in_tail];                   // Timer tuned so no need to check
+      in_tail++;                                   // Transmit UART
+      in_tail %= UART_SIZE_IN;                    // Wrap around
+   }
+   return data;
 }
 
-void setup(void){
-   // Start of peripheral setup
+void uartLoadIn(U8 rx){
+   uart_in[in_head] = rx;
+   in_head++;
+   in_head %= UART_SIZE_IN;
+}
+
+U8 uartSizeIn(void){
+   if(in_head < in_tail){
+      return UART_SIZE_IN - in_tail + in_head;
+   }else{
+      return in_head - in_tail;
+   }
+}
+
+void uartLoadOut(U8 tx){			               // Handle buffering out Tx UART
+	uart_out[out_head] = tx;	                  // Buffer outgoing						
+	out_head++;
+   out_head %= UART_SIZE_OUT;			            // Wrap around
+}
+
+void uartTransmit(void){
+   if(out_head != out_tail){
+      SBUF0 = uart_out[out_tail];                   // Timer tuned so no need to check
+      out_tail++;                                   // Transmit UART
+      out_tail %= UART_SIZE_OUT;                    // Wrap around
+   }
+}
+
+U16 readAdc(void){                              // Read the available ADCs
+   U8 i;
+   ADC0MX = ADC3;
+   for(i=0;i<2;i++){
+      ADC0CN0 |= ADC0CN0_ADBUSY__SET;
+      while(ADC0CN0 & ADC0CN0_ADBUSY__SET);     // Wait for sample to complete
+   }
+   return (U16)ADC0;        
+}
+
+void motorControl(void){
+   U16 adc;
+   adc =  readAdc() >> 2;
+   motor_duty_left_fwd = adc;
+   motor_duty_right_fwd = 0x00FF - adc;
+   if(0 == motor_pwm_counter){
+      LED0 = 1;
+      LED1 = 1;
+   }
+   if(motor_duty_left_fwd < motor_pwm_counter){ 
+      LED0 = 0;
+   }
+   if(motor_duty_right_fwd < motor_pwm_counter){ 
+      LED1 = 0;
+   }
+}
+
+void setup(void){ 
 	U8 TCON_save;
 	// Watchdog 
-		WDTCN = 0xDE; 								// First key
-		WDTCN = 0xAD; 								// Second key - Watchdog now disabled
+		WDTCN = 0xDE; 								      // First key
+		WDTCN = 0xAD; 								      // Second key - Watchdog now disabled
 	// Clock
 		CLKSEL = 
-			CLKSEL_CLKSL__HFOSC 				| 	// Use 24.5MHz interal clock
-			CLKSEL_CLKDIV__SYSCLK_DIV_1;			// Do not divide
+			CLKSEL_CLKSL__HFOSC 				| 	      // Use 24.5MHz interal clock
+			CLKSEL_CLKDIV__SYSCLK_DIV_1;			   // Do not divide
 	// Port 0
 		P0MDOUT = 
 			P0MDOUT_B0__PUSH_PULL 				| 	// PWM1 output
 			P0MDOUT_B1__PUSH_PULL 				| 	// PWM2 output
 			P0MDOUT_B2__OPEN_DRAIN				| 
 			P0MDOUT_B3__OPEN_DRAIN 				| 
-			P0MDOUT_B4__PUSH_PULL 				| 	// UART TX
-			P0MDOUT_B5__OPEN_DRAIN				| 	// UART RX
+			P0MDOUT_B4__PUSH_PULL 				| 	   // UART TX
+			P0MDOUT_B5__OPEN_DRAIN				| 	   // UART RX
 			P0MDOUT_B6__OPEN_DRAIN 				| 
 			P0MDOUT_B7__OPEN_DRAIN;
 	// Port 1
@@ -205,7 +246,7 @@ void setup(void){
 		P1MDIN = 
 			P1MDIN_B0__DIGITAL 					|	// ADC1
 			P1MDIN_B1__DIGITAL 					| 	// ADC2
-			P1MDIN_B2__ANALOG					| 	// ADC3
+			P1MDIN_B2__ANALOG					   | 	// ADC3
 			P1MDIN_B3__DIGITAL 					| 
 			P1MDIN_B4__DIGITAL 					| 
 			P1MDIN_B5__DIGITAL					| 
@@ -213,23 +254,23 @@ void setup(void){
 			P1MDIN_B7__DIGITAL;
 	// Port crossbar
 		XBR0 = 
-			XBR0_URT0E__ENABLED 				| 	// Route out UART
+			XBR0_URT0E__ENABLED 				   | 	// Route out UART
 			XBR0_SPI0E__DISABLED 				| 
-			XBR0_SMB0E__DISABLED				| 
-			XBR0_CP0E__DISABLED 				| 
+			XBR0_SMB0E__DISABLED				   | 
+			XBR0_CP0E__DISABLED 				   | 
 			XBR0_CP0AE__DISABLED 				| 
 			XBR0_CP1E__DISABLED					| 
 			XBR0_CP1AE__DISABLED 				|
 			XBR0_SYSCKE__DISABLED;
 		XBR1 = 
 			XBR1_PCA0ME__CEX0_CEX1 				| 	// Route out PCA0 and PCA1
-			XBR1_ECIE__DISABLED 				| 
+			XBR1_ECIE__DISABLED 				   | 
 			XBR1_T0E__DISABLED					| 
 			XBR1_T1E__DISABLED 					|
 			XBR1_T2E__DISABLED;
 		XBR2 = 
-			XBR2_WEAKPUD__PULL_UPS_ENABLED 		| 	// Weak pull ups
-			XBR2_XBARE__ENABLED;					// Enable cross bar
+			XBR2_WEAKPUD__PULL_UPS_ENABLED 	| 	   // Weak pull ups
+			XBR2_XBARE__ENABLED;					      // Enable cross bar
 	// ADC
 		//ADC0MX = 									// Mux set in application
 		//	ADC0MX_ADC0MX__ADC0P10;
