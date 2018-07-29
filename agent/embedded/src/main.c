@@ -19,7 +19,7 @@
 #define BAUDRATE   		115200					// Baud rate of UART in bps
 //
 #define UART_SIZE_IN		8
-#define UART_SIZE_OUT   8
+#define UART_SIZE_OUT   20
 #define ADC1				0x08
 #define ADC2				0x09
 #define ADC3				0x0A
@@ -30,6 +30,9 @@ SBIT(LED0, SFR_P1, 1);                 		// P1.1 LED
 //-----------------------------------------------------------------------------
 // Prototypes
 //-----------------------------------------------------------------------------
+
+void u32_to_dec_str(U32 data, U8 * ptr);
+void u32_to_hex_str(U32 data, U8 * ptr);
 void  setup(void);
 U8    uartRx();
 void  uartLoadIn(U8 rx);
@@ -62,8 +65,12 @@ volatile U8    tick;
 //-----------------------------------------------------------------------------
 
 void main (void){ 
-  
    volatile U8 data;
+   U8 i;
+   U8 str[32];
+   U32 adc;
+
+   while(1) u32_to_dec_str(2000, str);;
 
    motor_pwm_counter    = 0;
    motor_duty_left_fwd  = 0;
@@ -85,26 +92,27 @@ void main (void){
 
    LED0 = 0;
    LED1 = 0;
-   uartLoadOut('T');	
-   uartLoadOut('E');	
-   uartLoadOut('S');	
-   uartLoadOut('T');	
- 
+   
+
    tick = 0;
    while (1){ 
       if(SCON0_RI){   
          SCON0_RI = 0;
          data = SBUF0;
-         uartLoadIn(data); 
-         if('Q' == data){
-            while(uartSizeIn()){
-               uartLoadOut(uartRx());
+         
+         //uartLoadOut('\n');	
+         //uartLoadOut('\r');	
+         //uartLoadOut(data); 
+         if('Q' == data){ 
+            //uartLoadOut('\n');	
+            //uartLoadOut('\r');	
+            adc = (U32)readAdc();
+            u32_to_dec_str(2000, str);
+            for(i=0;i<10;i++){
+               uartLoadOut(str[i]);
             }
-         }else{
-            uartLoadOut(uartSizeIn() + 48);
          }
       }
-
 
       if(1 == tick){
          motorControl(); 
@@ -136,18 +144,43 @@ INTERRUPT (TIMER2_ISR, TIMER2_IRQn){			   // Timer running at 4KHz
 
 
 
+// Turn 32 bit data in to a string of 10 chars
+void u32_to_dec_str(U32 data, U8 * ptr){
+   U8 * p;
+   S8 i,j;
+   U32 c, d, m;
+   d = data;
+   p = ptr;
+   for(i=9;i>-1;i--){ 
+      m = 1;
+      for(j=0;j<i;j++){
+         m *= 10;
+      }
+      c = d / m; 
+      *p = (U8)c + 48;
+      *p++;
+      d -= c * m;
+   }
+}
 
-
-
-
-// ATOI function needed
-
-
-
-
-
-
-
+// Turn 32 bit data In to a string of 8 chars
+void u32_to_hex_str(U32 data, U8 * ptr){
+   U8 * p;
+   S8 i;
+   U32 c, d;
+   d = data;
+   p = ptr;
+   for(i=28;i>-1;i-=4){
+      c = d >> i; 
+      if(c > 9){
+         *p = c + 55;
+      }else{
+         *p = c + 48;
+      }
+      *p++;
+      d -= c << i;
+   }
+}
 
 U8 uartRx(){
    U8 data = 0;

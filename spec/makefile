@@ -1,0 +1,2 @@
+docs:
+	pdflatex circus.tex
