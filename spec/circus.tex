@@ -41,23 +41,12 @@
          \item Agents have a valid ID range of 0x01 to 0xFE inclusive
          \item Agent ID = pin strap value + 1
       \end{itemize}
-   
-   \subsection{Receiver}
-      \begin{itemize}
-         \item The IR receiver will be connected to UART receiver of the microcontroller. 
-      \end{itemize}
-
+  
 
 \section{Communications}
+ 
 \begin{itemize}
-   \item    The agent receiver state machine is shown in Figure~\ref{fig_communications_sm}.
-   \item    0xFF is invalid in both the \textbf{ID} and \textbf{CMD} states and will 
-            push the state back to idle \textbf{ID} state. This can be used to reset the state machine
-            as flushing with 0xFF will have no action.
-   \item    Unmatching IDs will be stalled to allow \textbf{CMD} and \textbf{PW} to pass which may clash with valid \textbf{IDs}. 
-   \item    Valid agents are shown in Table~\ref{tab_ids}.
-   \item    Upon leaving the \textbf{ID} state an action must be reached before 50ms.
-            An example of a completed and timed out transaction is shown in Figure~\ref{fig_communications_wave}.
+   \item The communication scheme overview is shown in Figure~\ref{fig_communications}. 
 \end{itemize}
 
 
@@ -67,6 +56,39 @@
    \includegraphics[width=6cm,keepaspectratio]{communications/communications.png} 
    \caption{Communication overview.}
 \end{figure}
+ 
+   \subsection{Receiver}
+      \begin{itemize}
+         \item The IR receiver will be connected to UART receiver of the microcontroller. 
+         \item The receiver is initially in the \textbf{OFF} state. 
+         \item The recover polls every 200ms for a carrier.
+         \item The receiver must successfully find a carrier in two adjacent polls to switch the 
+               receiver in to the \textbf{ON} state.
+         \item Once in the \textbf{ON} state the receiver will constantly monitor the presence 
+               of a carrier and return to the `\textbf{OFF} state when the carrier is lost. 
+               This is 
+      \end{itemize}
+
+      \begin{figure}[h]
+         \centering
+         \label{fig_communications_time}
+         \includegraphics[width=10cm,keepaspectratio]{communications/communications_time.png} 
+         \caption{Communication initiate timeout.}
+      \end{figure}
+
+
+
+\begin{itemize}
+   \item    The agent receiver state machine is shown in Figure~\ref{fig_communications_sm}.
+   \item    0xFF is invalid in both the \textbf{ID} and \textbf{CMD} states and will 
+            push the state back to idle \textbf{ID} state. This can be used to reset the state machine
+            as flushing with 0xFF will have no action.
+   \item    Unmatching IDs will be stalled to allow \textbf{CMD} and \textbf{PW} to pass which may clash with valid \textbf{IDs}. 
+   \item    Valid agents are shown in Table~\ref{tab_ids}.
+   \item    Upon leaving the \textbf{ID} state an action must be reached before 50ms.
+            An example of a completed and timed out transaction is shown in Figure~\ref{fig_communications_wave}.
+   \item    The 
+\end{itemize}
 
 \begin{figure}[h]
    \centering
@@ -80,13 +102,6 @@
    \label{fig_communications_wave}
    \includegraphics[width=8cm,keepaspectratio]{communications/communications_wave.png} 
    \caption{Communication message timeout.}
-\end{figure}
-
-\begin{figure}[h]
-   \centering
-   \label{fig_communications_time}
-   \includegraphics[width=8cm,keepaspectratio]{communications/communications_time.png} 
-   \caption{Communication initiate timeout.}
 \end{figure}
 
 
