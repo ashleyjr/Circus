@@ -27,6 +27,8 @@
             CMD                  &  Command                                      \\ \hline
             ID                   &  Identity                                     \\ \hline
             IR                   &  Infra-Red                                    \\ \hline
+            LED                  &  Light Emitting Diode                         \\ \hline
+            OOK                  &  On-Off Keying                                \\ \hline
             PW                   &  Parity Word                                  \\ \hline
             UART                 &  Universal Asynchronous Receiver-Transmitter  \\ \hline  
          \end{tabular}
@@ -42,12 +44,69 @@
          \item Agent ID = pin strap value + 1
       \end{itemize}
   
+   \subsection{CMD}
+      \begin{itemize}
+         \item The list off \textbf{CMDs} is held in Table~\ref{tab_cmds}. 
+      \end{itemize}
+ 
+      \begin{table}[h]
+         \centering
+         \caption{Valid agent \textbf{CMDs}}
+         \label{tab_cmds}
+         \begin{tabular}{|l|l|l|l|l|l|}
+               \hline
+               \textbf{CMD}   &  \textbf{Control}     &  \textbf{Green LED}   &  \textbf{Red LED}  &  \textbf{Left Motor}  &  \textbf{Right Motor} \\ \hline  
+               0x00           &                       &                       &                    &                       &  Off                  \\ \hline   
+               0x01           &                       &                       &                    &                       &  Forward slow         \\ \hline   
+               0x02           &                       &                       &                    &                       &  Forward              \\ \hline   
+               0x03           &                       &                       &                    &                       &  Forward fast         \\ \hline   
+               0x04           &                       &                       &                    &                       &  Reverse slow         \\ \hline   
+               0x05           &                       &                       &                    &                       &  Reverse              \\ \hline   
+               0x06           &                       &                       &                    &                       &  Reverse fast         \\ \hline   
+               ...            &                       &                       &                    &                       &                       \\ \hline   
+               0x10           &                       &                       &                    &  Off                  &                       \\ \hline   
+               0x11           &                       &                       &                    &  Forward slow         &                       \\ \hline   
+               0x12           &                       &                       &                    &  Forward              &                       \\ \hline   
+               0x13           &                       &                       &                    &  Forward fast         &                       \\ \hline   
+               0x14           &                       &                       &                    &  Reverse slow         &                       \\ \hline   
+               0x15           &                       &                       &                    &  Reverse              &                       \\ \hline   
+               0x16           &                       &                       &                    &  Reverse fast         &                       \\ \hline   
+               ...            &                       &                       &                    &                       &                       \\ \hline   
+               0x20           &                       &                       &  Force off         &                       &                       \\ \hline   
+               0x21           &                       &                       &  Force on          &                       &                       \\ \hline   
+               0x22           &                       &                       &  Low battery       &                       &                       \\ \hline   
+               0x23           &                       &                       &  Full battery      &                       &                       \\ \hline   
+               0x24           &                       &                       &  Blink on rx       &                       &                       \\ \hline   
+               0x25           &                       &                       &  Blink on tx       &                       &                       \\ \hline   
+               ...            &                       &                       &                    &                       &                       \\ \hline   
+               0x30           &                       &  Force off            &                    &                       &                       \\ \hline   
+               0x31           &                       &  Force on             &                    &                       &                       \\ \hline   
+               0x32           &                       &  Low battery          &                    &                       &                       \\ \hline   
+               0x33           &                       &  Full battery         &                    &                       &                       \\ \hline   
+               0x34           &                       &  Blink on rx          &                    &                       &                       \\ \hline   
+               0x35           &                       &  Blink on tx          &                    &                       &                       \\ \hline   
+               ...            &                       &                       &                    &                       &                       \\ \hline   
+               0x80           &  Shut down            &                       &                    &                       &                       \\ \hline   
+
+         
+         \end{tabular}
+      \end{table}
+
 
 \section{Communications}
  
 \begin{itemize}
    \item The communication scheme overview is shown in Figure~\ref{fig_communications}. 
+   \item Communication is achieved using and \textbf{IR} link.
+   \item The carrier for the link is 38KHz.
+   \item The carrier will be modulated with a \textbf{UART} using \textbf{OOK}.
+   \item The \textbf{UART} baud rate will be 9600.
+   \item The \textbf{UART} will carry 8 bits of data.
+   \item The \textbf{UART} will 1 start/stop bit.
+   \item The \textbf{UART} will not contain a parity bit.
+   \item The \textbf{UART} will not use flow control.
 \end{itemize}
+
 
 
 \begin{figure}[h]
@@ -56,7 +115,14 @@
    \includegraphics[width=6cm,keepaspectratio]{communications/communications.png} 
    \caption{Communication overview.}
 \end{figure}
+
+   \subsection{Broadcast}
+      \begin{itemize}
+         \item The IR receiver will be connected to UART receiver of the microcontroller.  
+      \end{itemize}
+
  
+   
    \subsection{Receiver}
       \begin{itemize}
          \item The IR receiver will be connected to UART receiver of the microcontroller. 
