@@ -25,12 +25,15 @@
             \hline
             \textbf{Acronyms}    &  \textbf{Description}                         \\ \hline  
             CMD                  &  Command                                      \\ \hline
+            GUI                  &  Graphical User Interface                     \\ \hline
             ID                   &  Identity                                     \\ \hline
             IR                   &  Infra-Red                                    \\ \hline
             LED                  &  Light Emitting Diode                         \\ \hline
             OOK                  &  On-Off Keying                                \\ \hline
+            PC                   &  Personal Computer                            \\ \hline
             PW                   &  Parity Word                                  \\ \hline
             UART                 &  Universal Asynchronous Receiver-Transmitter  \\ \hline  
+            USB                  &  Universal Serial Bus                         \\ \hline
          \end{tabular}
 \end{table}  
 
@@ -118,7 +121,12 @@
 
    \subsection{Broadcast}
       \begin{itemize}
-         \item The IR receiver will be connected to UART receiver of the microcontroller.  
+         \item The IR receiver will be connected to UART transmitter of a microcontroller. 
+         \item The \textbf{UART} signal will gate the carrier.
+         \item The broadcaster will be connected to a \textbf{PC}.
+         \item The \textbf{PC} will us a \textbf{GUI} application to control the broadcaster.
+         \item The microcontroller used to control the broadcast will communicate
+               with the \textbf{PC} using low speed \textbf{USB}.
       \end{itemize}
 
  
@@ -187,5 +195,19 @@
 
 
 
+\section{GUI}
+   \begin{itemize}
+      \item The \textbf{GUI} will contain a tick box for every valid agent \textbf{ID}. 
+      \item The \textbf{GUI} will contain a broadcast tick box which will disable all \textbf{ID}
+            tick boxes.
+      \item The \textbf{GUI} will contain a button to force a reset. 
+      \item The arrow keys will be mapped to the directional control of the agents.
+      \item The G key will be mapped to cycle through the green \textbf{LED}.
+      \item The R key will be mapped to cycle thorugh the red \textbf{LED}
+      \item The \textbf{GUI} will contain a text box streaming raw \textbf{CMDs} being set to the agents.
+   \end{itemize}
+
+
 
 \end{document}
+
