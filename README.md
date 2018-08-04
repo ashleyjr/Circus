@@ -22,3 +22,6 @@
    Docs
       $ sudo apt-get install texlive-latex-base
       $ sudo apt-get install texlive-latex-extra
+
+   GUI
+      $ sudo apt-get install libgtk-3-dev
