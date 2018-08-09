@@ -1,5 +1,14 @@
 #include <gtk/gtk.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <termios.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
+#define BAUDRATE B115200 
+#define MODEMDEVICE "/dev/ttyUSB0"
 #define  APP_ID         "org.gtk.circus"
 #define  APP_NAME       "Circus"
 #define  AGENT_ID_START 1
@@ -8,6 +17,9 @@
 #define  BUFFER_TIME_S  0.011
 #define  BUFFER_TX_SIZE 128
 
+int fd=0;
+struct termios oldtp, newtp;
+
 typedef unsigned char   uint8_t;
 typedef unsigned short  uint16_t;
 
@@ -15,13 +27,57 @@ static volatile uint8_t    tx_buffer[BUFFER_TX_SIZE];
 static volatile uint16_t   tx_buffer_head,
                            tx_buffer_tail;
 
+
+void openport( void
+){
+   fd = open(MODEMDEVICE, O_RDWR | O_NOCTTY |O_NDELAY );	
+   if (fd < 0){
+      perror(MODEMDEVICE);         
+   }                                                         
+   fcntl(fd,F_SETFL,0);
+   tcgetattr(fd,&oldtp); /* save current serial port settings */
+   // tcgetattr(fd,&newtp); /* save current serial port settings */
+   bzero(&newtp, sizeof(newtp));
+   // bzero(&oldtp, sizeof(oldtp));
+   
+   newtp.c_cflag = BAUDRATE | CRTSCTS | CS8 | CLOCAL | CREAD;
+   
+   newtp.c_iflag = IGNPAR | ICRNL;
+   
+   newtp.c_oflag = 0;
+   
+   newtp.c_lflag = ICANON;
+   
+   newtp.c_cc[VINTR]    = 0;     /* Ctrl-c */
+   newtp.c_cc[VQUIT]    = 0;     /* Ctrl-\ */
+   newtp.c_cc[VERASE]   = 0;     /* del */
+   newtp.c_cc[VKILL]    = 0;     /* @ */
+   //newtp.c_cc[VEOF]     = 4;     /* Ctrl-d */
+   newtp.c_cc[VEOF]     = 0;     /* Ctrl-d */
+   newtp.c_cc[VTIME]    = 0;     /* inter-character timer unused */
+   newtp.c_cc[VMIN]     = 1;     /* blocking read until 1 character arrives */
+   newtp.c_cc[VSWTC]    = 0;     /* '\0' */
+   newtp.c_cc[VSTART]   = 0;     /* Ctrl-q */
+   newtp.c_cc[VSTOP]    = 0;     /* Ctrl-s */
+   newtp.c_cc[VSUSP]    = 0;     /* Ctrl-z */
+   newtp.c_cc[VEOL]     = 0;     /* '\0' */
+   newtp.c_cc[VREPRINT] = 0;     /* Ctrl-r */
+   newtp.c_cc[VDISCARD] = 0;     /* Ctrl-u */
+   newtp.c_cc[VWERASE]  = 0;     /* Ctrl-w */
+   newtp.c_cc[VLNEXT]   = 0;     /* Ctrl-v */
+   newtp.c_cc[VEOL2]    = 0;     /* '\0' */ 
+}
+
 /* Timer function called to unload the buffer
    and transmit data */
 static gboolean unload_tx_buffer( gpointer textview  
 ){
+   char str[2];
+
    if(tx_buffer_head != tx_buffer_tail){ 
-      sprintf(str, "%d", tx_buffer[tx_buffer_tail]); 
-      // TODO: Send data
+      sprintf(str, "%c", tx_buffer[tx_buffer_tail]);
+      g_print(str);
+      write(fd, str, 2);
       tx_buffer_tail++; 
       tx_buffer_tail %= BUFFER_TX_SIZE;
    } 
@@ -53,7 +109,7 @@ static void set_agent_toggle_box_cb (  GtkButton   *button,
 /* Key press callback for all active keys */
 static void  keypress_cb (GtkWidget *widget, GdkEventKey *event, gpointer data) {
    switch (event->keyval){
-      case GDK_KEY_Left:   load_tx_buffer('A');                          
+      case GDK_KEY_Left:   load_tx_buffer('A');                           
                            break; 
    }      
 }
@@ -129,6 +185,9 @@ int main (  int    argc,
    // Init buffer
    tx_buffer_head = 0;
    tx_buffer_tail = 0;
+
+   // Connect UART
+   openport();
 
    // Init app
    app = gtk_application_new (APP_ID, G_APPLICATION_FLAGS_NONE);
