@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------------
-// Project: Switcher
+// Project: Circus/broadcast
 // File: 	main.c
 // Brief:	Single main file containing all code
 //-----------------------------------------------------------------------------
@@ -15,59 +15,36 @@
 // Defines
 //-----------------------------------------------------------------------------
 
-#define SYSCLK      		24500000   				// SYSCLK frequency in Hz
-#define BAUDRATE   			115200					// Baud rate of UART in bps
+#define SYSCLK      	24500000   		   // SYSCLK frequency in Hz
+#define BAUDRATE     9600			      // Baud rate of UART in bps
 
-#define P					5
-#define I					2
-
-#define UART_SIZE_IN		5
-#define UART_SIZE_OUT 		8
-
-#define ADC1				0x08
-#define ADC2				0x09
-#define ADC3				0x0A
-
-#define SCALE_MUL			6068					// When combined with >> 10 will scale by 5.926 to compensate for potential divider
-
-#define DEFAULT_OUT_MV		5000
-#define DEFAULT_HIGH_MV		6000
-#define DEFAULT_LOW_MV		4000
-
-SBIT(TEST2, SFR_P1, 3);                 			// DS5 P1.0 LED
-SBIT(TEST1, SFR_P1, 4);                 			// DS5 P1.0 LED
+SBIT(CARRIER_CTRL, SFR_P1, 0);         // DS5 P1.0 LED
 
 //-----------------------------------------------------------------------------
 // Prototypes
 //-----------------------------------------------------------------------------
-
-U16 readAdc(U8 sel);
-void uartLoadOut(U8 tx);
+void setup(void);
 
 //-----------------------------------------------------------------------------
 // Global Variables
 //-----------------------------------------------------------------------------
-
-volatile U8 	uart_in[UART_SIZE_IN];
-volatile U8 	uart_out[UART_SIZE_OUT];
-volatile U8 	head;
-volatile U8 	tail;
-volatile int 	integral;
-volatile U8 	duty;
-volatile U16 	high_mV;
-volatile U16 	low_mV;
-volatile U16 	target_mV;
-volatile U16	adc1;
-volatile U16	adc2;
-volatile U16	adc3;
-volatile U16 	current;
 
 //-----------------------------------------------------------------------------
 // Main Routine
 //-----------------------------------------------------------------------------
 
 void main (void){
-	// Start of peripheral setup
+   setup(); 
+   PCA0CPH0 = 27;    // Frequency of 37.8KHz 
+   while (1);
+} 
+
+//-----------------------------------------------------------------------------
+// Routines
+//-----------------------------------------------------------------------------
+
+void setup(void){
+// Start of peripheral setup
 	U8 TCON_save;
 	// Watchdog 
 		WDTCN = 0xDE; 								// First key
@@ -217,67 +194,13 @@ void main (void){
 		TMR2CN |= TMR2CN_TR2__RUN;
 	// End of peripheral setup
 	
-	integral 	= 0;
-	target_mV 	= DEFAULT_OUT_MV;
-	high_mV		= DEFAULT_HIGH_MV;
-	low_mV		= DEFAULT_LOW_MV;
-	
-	//SCON0_TI 	= 1; 
-	//SCON0_RI 	= 0;
-
-   
-   PCA0CPH0 = 27;    // Frequency of 37.8KHz 
-
-   //PCA0CPH0 = 0x10;
-   //PCA0CPL0 = 0x10;
-	
-   while (1){
-		if(SCON0_RI){
-			SCON0_RI = 0;
-			uart_in[4] = uart_in[3];										// Small buffer, less code not to use loop
-			uart_in[3] = uart_in[2];
-			uart_in[2] = uart_in[1];
-			uart_in[1] = uart_in[0];
-			uart_in[0] = SBUF0;
-			
-		}
-	}
-} 
-
-//-----------------------------------------------------------------------------
-// Routines
-//-----------------------------------------------------------------------------
-
-void uartLoadOut(U8 tx){							// Handle buffering out Tx UART
-	uart_out[head] = tx;							// Buffer outgoing
-	head++;						
-	head %= UART_SIZE_OUT;							// Wrap around
 }
-
-U16 readAdc(U8 sel){								// Read the available ADCs
-	U8 i;
-	ADC0MX = sel;
-	for(i=0;i<2;i++){
-		ADC0CN0 |= ADC0CN0_ADBUSY__SET;
-		while(ADC0CN0 & ADC0CN0_ADBUSY__SET);		// Wait for sample to complete
-	}
-	return (((U32)ADC0)*SCALE_MUL) >> 10;			// Scale to mV
-}
-
 //-----------------------------------------------------------------------------
 // Interrupt Routines
 //-----------------------------------------------------------------------------
 
 INTERRUPT (TIMER1_ISR, TIMER1_IRQn){}				// Needed for UART timing
 	
-INTERRUPT (TIMER2_ISR, TIMER2_IRQn){				// One timer handling UART Tx and PID
-	//TEST1 = 1;	
-	//
-	//TMR2H = 255;									// Runs at 4KHz
-	//TMR2CN_TF2H = 0;								// Enable interrupt again
-	//TEST1 = 0;										// Timing debug
-}
-
 //-----------------------------------------------------------------------------
 // END
 //-----------------------------------------------------------------------------
