@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/ashley/Circus/agent/hardware/circus_agent.sch</source>
+    <date>Sun 19 Aug 2018 18:44:50 BST</date>
+    <tool>Eeschema 4.0.7-e2-6376~58~ubuntu16.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>circus_agent.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C21">
+      <value>220nF, 6.3V</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="Man">MULTICOMP</field>
+        <field name="PartNum">MC0402X224K6R3CT </field>
+      </fields>
+      <libsource lib="circus_agent" part="MC0402X224K6R3CT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B32A540</tstamp>
+    </comp>
+    <comp ref="R21">
+      <value>330R, 63mW </value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="Man">VISHAY</field>
+        <field name="PartNum">CRCW0402330RFKED </field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B32A963</tstamp>
+    </comp>
+    <comp ref="Q21">
+      <value>PMV65XPEA</value>
+      <footprint>circus_agent:PMV65XPEA</footprint>
+      <fields>
+        <field name="Man">NXP</field>
+        <field name="PartNum">PMV65XPEA</field>
+      </fields>
+      <libsource lib="circus_agent" part="PMV65XPEA"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B32B2F5</tstamp>
+    </comp>
+    <comp ref="R23">
+      <value>220K, 63mW </value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B32B5C3</tstamp>
+    </comp>
+    <comp ref="Q72">
+      <value>PMV65XPEA</value>
+      <footprint>circus_agent:PMV65XPEA</footprint>
+      <fields>
+        <field name="Man">NXP</field>
+        <field name="PartNum">PMV65XPEA</field>
+      </fields>
+      <libsource lib="circus_agent" part="PMV65XPEA"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B33C152</tstamp>
+    </comp>
+    <comp ref="Q71">
+      <value>PMV65XPEA</value>
+      <footprint>circus_agent:PMV65XPEA</footprint>
+      <fields>
+        <field name="Man">NXP</field>
+        <field name="PartNum">PMV65XPEA</field>
+      </fields>
+      <libsource lib="circus_agent" part="PMV65XPEA"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B33C47C</tstamp>
+    </comp>
+    <comp ref="Q74">
+      <value>IRLML6244TRPBF</value>
+      <footprint>circus_agent:IRLML6244TRPBF</footprint>
+      <libsource lib="circus_agent" part="IRLML6244TRPBF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B33FEEC</tstamp>
+    </comp>
+    <comp ref="Q75">
+      <value>IRLML6244TRPBF</value>
+      <footprint>circus_agent:IRLML6244TRPBF</footprint>
+      <libsource lib="circus_agent" part="IRLML6244TRPBF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B33FF48</tstamp>
+    </comp>
+    <comp ref="M71">
+      <value>Motor</value>
+      <footprint>circus_agent:Motor</footprint>
+      <libsource lib="circus_agent" part="Motor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B340E50</tstamp>
+    </comp>
+    <comp ref="Q73">
+      <value>MMBT2222LT1G</value>
+      <footprint>circus_agent:MMBT2222LT1G</footprint>
+      <libsource lib="circus_agent" part="MMBT2222LT1G"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B34905D</tstamp>
+    </comp>
+    <comp ref="R71">
+      <value>10K, 63mW </value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B34927B</tstamp>
+    </comp>
+    <comp ref="R73">
+      <value>220K, 63mW </value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B349557</tstamp>
+    </comp>
+    <comp ref="Q76">
+      <value>MMBT2222LT1G</value>
+      <footprint>circus_agent:MMBT2222LT1G</footprint>
+      <libsource lib="circus_agent" part="MMBT2222LT1G"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B349737</tstamp>
+    </comp>
+    <comp ref="R72">
+      <value>10K, 63mW </value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B349A81</tstamp>
+    </comp>
+    <comp ref="R74">
+      <value>220K, 63mW </value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B349ADE</tstamp>
+    </comp>
+    <comp ref="Q82">
+      <value>PMV65XPEA</value>
+      <footprint>circus_agent:PMV65XPEA</footprint>
+      <fields>
+        <field name="Man">NXP</field>
+        <field name="PartNum">PMV65XPEA</field>
+      </fields>
+      <libsource lib="circus_agent" part="PMV65XPEA"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B354D15</tstamp>
+    </comp>
+    <comp ref="Q81">
+      <value>PMV65XPEA</value>
+      <footprint>circus_agent:PMV65XPEA</footprint>
+      <fields>
+        <field name="Man">NXP</field>
+        <field name="PartNum">PMV65XPEA</field>
+      </fields>
+      <libsource lib="circus_agent" part="PMV65XPEA"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B354D1D</tstamp>
+    </comp>
+    <comp ref="Q84">
+      <value>IRLML6244TRPBF</value>
+      <footprint>circus_agent:IRLML6244TRPBF</footprint>
+      <libsource lib="circus_agent" part="IRLML6244TRPBF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B354D23</tstamp>
+    </comp>
+    <comp ref="Q85">
+      <value>IRLML6244TRPBF</value>
+      <footprint>circus_agent:IRLML6244TRPBF</footprint>
+      <libsource lib="circus_agent" part="IRLML6244TRPBF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B354D29</tstamp>
+    </comp>
+    <comp ref="M81">
+      <value>Motor</value>
+      <footprint>circus_agent:Motor</footprint>
+      <libsource lib="circus_agent" part="Motor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B354D2F</tstamp>
+    </comp>
+    <comp ref="Q83">
+      <value>MMBT2222LT1G</value>
+      <footprint>circus_agent:MMBT2222LT1G</footprint>
+      <libsource lib="circus_agent" part="MMBT2222LT1G"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B354D3B</tstamp>
+    </comp>
+    <comp ref="R81">
+      <value>10K, 63mW </value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B354D43</tstamp>
+    </comp>
+    <comp ref="R83">
+      <value>220K, 63mW </value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B354D4B</tstamp>
+    </comp>
+    <comp ref="Q86">
+      <value>MMBT2222LT1G</value>
+      <footprint>circus_agent:MMBT2222LT1G</footprint>
+      <libsource lib="circus_agent" part="MMBT2222LT1G"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B354D51</tstamp>
+    </comp>
+    <comp ref="R82">
+      <value>10K, 63mW </value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B354D66</tstamp>
+    </comp>
+    <comp ref="R84">
+      <value>220K, 63mW </value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B354D6E</tstamp>
+    </comp>
+    <comp ref="R43">
+      <value>DNF</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B357F92</tstamp>
+    </comp>
+    <comp ref="R44">
+      <value>220K</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B358024</tstamp>
+    </comp>
+    <comp ref="R41">
+      <value>DNF</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B3580BB</tstamp>
+    </comp>
+    <comp ref="R42">
+      <value>220K</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B35814D</tstamp>
+    </comp>
+    <comp ref="Q41">
+      <value>PMV65XPEA</value>
+      <footprint>circus_agent:PMV65XPEA</footprint>
+      <fields>
+        <field name="Man">NXP</field>
+        <field name="PartNum">PMV65XPEA</field>
+      </fields>
+      <libsource lib="circus_agent" part="PMV65XPEA"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B358429</tstamp>
+    </comp>
+    <comp ref="R45">
+      <value>220K</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B358577</tstamp>
+    </comp>
+    <comp ref="Q11">
+      <value>PMV65XPEA</value>
+      <footprint>circus_agent:PMV65XPEA</footprint>
+      <fields>
+        <field name="Man">NXP</field>
+        <field name="PartNum">PMV65XPEA</field>
+      </fields>
+      <libsource lib="circus_agent" part="PMV65XPEA"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B35B5AF</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>10K, 63mW </value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B35B672</tstamp>
+    </comp>
+    <comp ref="Q12">
+      <value>MMBT2222LT1G</value>
+      <footprint>circus_agent:MMBT2222LT1G</footprint>
+      <libsource lib="circus_agent" part="MMBT2222LT1G"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B35B962</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>120R</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B35BDB7</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>100R</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B35BE62</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>220K, 63mW </value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B35E52F</tstamp>
+    </comp>
+    <comp ref="C1002">
+      <value>100nF, 6.3V</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="Man">MULTICOMP</field>
+        <field name="PartNum">MC0402X224K6R3CT </field>
+      </fields>
+      <libsource lib="circus_agent" part="MC0402X224K6R3CT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B36B62A</tstamp>
+    </comp>
+    <comp ref="C1001">
+      <value>1uF, 6.3V</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="Man">MULTICOMP</field>
+        <field name="PartNum">MC0402X224K6R3CT </field>
+      </fields>
+      <libsource lib="circus_agent" part="MC0402X224K6R3CT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B36BF9E</tstamp>
+    </comp>
+    <comp ref="R1001">
+      <value>1K</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B36D9FD</tstamp>
+    </comp>
+    <comp ref="R1002">
+      <value>1K</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B36DE61</tstamp>
+    </comp>
+    <comp ref="R1003">
+      <value>1K</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B36E443</tstamp>
+    </comp>
+    <comp ref="D32">
+      <value>KPA-1606CGCK(GREEN)</value>
+      <footprint>circus_agent:KPA</footprint>
+      <libsource lib="circus_agent" part="KPA-1606CGCK(GREEN)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B375D12</tstamp>
+    </comp>
+    <comp ref="D31">
+      <value>KPA-1606ECR(RED)</value>
+      <footprint>circus_agent:KPA</footprint>
+      <libsource lib="circus_agent" part="KPA-1606ECR(RED)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B375DDB</tstamp>
+    </comp>
+    <comp ref="R31">
+      <value>39R</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B36F0CE</tstamp>
+    </comp>
+    <comp ref="R32">
+      <value>33R</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B378428</tstamp>
+    </comp>
+    <comp ref="U91">
+      <value>LP3985IM5-2.7/NOPB</value>
+      <footprint>circus_agent:LP3985</footprint>
+      <libsource lib="circus_agent" part="LP3985"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B379768</tstamp>
+    </comp>
+    <comp ref="C92">
+      <value>1uF, 6.3V</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="Man">MULTICOMP</field>
+        <field name="PartNum">MC0402X224K6R3CT </field>
+      </fields>
+      <libsource lib="circus_agent" part="MC0402X224K6R3CT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B37A340</tstamp>
+    </comp>
+    <comp ref="R92">
+      <value>10K</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B37AACB</tstamp>
+    </comp>
+    <comp ref="C91">
+      <value>1uF, 6.3V</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="Man">MULTICOMP</field>
+        <field name="PartNum">MC0402X224K6R3CT </field>
+      </fields>
+      <libsource lib="circus_agent" part="MC0402X224K6R3CT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B37C4FB</tstamp>
+    </comp>
+    <comp ref="C93">
+      <value>100nF, 6.3V</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="Man">MULTICOMP</field>
+        <field name="PartNum">MC0402X224K6R3CT </field>
+      </fields>
+      <libsource lib="circus_agent" part="MC0402X224K6R3CT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B37C6A3</tstamp>
+    </comp>
+    <comp ref="R91">
+      <value>0R</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B38F882</tstamp>
+    </comp>
+    <comp ref="U1001">
+      <value>C8051F850-C-GU</value>
+      <footprint>circus_agent:C8051F850-C-GU</footprint>
+      <libsource lib="circus_agent" part="C8051F850-C-GU"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B398AFF</tstamp>
+    </comp>
+    <comp ref="R22">
+      <value>0R</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B3AA168</tstamp>
+    </comp>
+    <comp ref="J61">
+      <value>PowerClip</value>
+      <footprint>circus_agent:PowerClip</footprint>
+      <libsource lib="circus_agent" part="PowerClip"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B3D1DFA</tstamp>
+    </comp>
+    <comp ref="J62">
+      <value>PowerClip</value>
+      <footprint>circus_agent:PowerClip</footprint>
+      <libsource lib="circus_agent" part="PowerClip"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B3D1FBB</tstamp>
+    </comp>
+    <comp ref="J63">
+      <value>PowerClip</value>
+      <footprint>circus_agent:PowerClip</footprint>
+      <libsource lib="circus_agent" part="PowerClip"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B3D2090</tstamp>
+    </comp>
+    <comp ref="J64">
+      <value>PowerClip</value>
+      <footprint>circus_agent:PowerClip</footprint>
+      <libsource lib="circus_agent" part="PowerClip"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B3D25AD</tstamp>
+    </comp>
+    <comp ref="C51">
+      <value>4F, 5.5V</value>
+      <footprint>circus_agent:SuperCap</footprint>
+      <libsource lib="circus_agent" part="SuperCap"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B3EB621</tstamp>
+    </comp>
+    <comp ref="U21">
+      <value>TSOP38438</value>
+      <footprint>circus_agent:TSOP38438</footprint>
+      <libsource lib="circus_agent" part="TSOP38438"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B3EC21A</tstamp>
+    </comp>
+    <comp ref="J1002">
+      <value>M20-9990345</value>
+      <footprint>circus_agent:M20-9990345</footprint>
+      <libsource lib="circus_agent" part="M20-9990345"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B3ED50E</tstamp>
+    </comp>
+    <comp ref="J1001">
+      <value>M20-9990345</value>
+      <footprint>circus_agent:M20-9990345</footprint>
+      <libsource lib="circus_agent" part="M20-9990345"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B3EDEC4</tstamp>
+    </comp>
+    <comp ref="R61">
+      <value>DNF</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B45B270</tstamp>
+    </comp>
+    <comp ref="R62">
+      <value>DNF</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B45B494</tstamp>
+    </comp>
+    <comp ref="R63">
+      <value>0R</value>
+      <footprint>circus_agent:0402</footprint>
+      <fields>
+        <field name="MULTICOMP">VISHAY</field>
+        <field name="PartNum">MCMR04X4701FTL</field>
+      </fields>
+      <libsource lib="circus_agent" part="CRCW0402330RFKED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B4A9C07</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="circus_agent" part="C8051F850-C-GU">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">C8051F850-C-GU</field>
+      </fields>
+      <pins>
+        <pin num="1" name="N/C" type="passive"/>
+        <pin num="2" name="P0.2" type="BiDi"/>
+        <pin num="3" name="P0.1/AGND" type="power_in"/>
+        <pin num="4" name="P0.0/VREF" type="power_in"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="VDD" type="power_in"/>
+        <pin num="7" name="nRST/C2CK" type="BiDi"/>
+        <pin num="8" name="C2D/P2.0" type="BiDi"/>
+        <pin num="9" name="P1.7" type="BiDi"/>
+        <pin num="10" name="P1.6" type="BiDi"/>
+        <pin num="11" name="P1.5" type="BiDi"/>
+        <pin num="12" name="P2.1" type="BiDi"/>
+        <pin num="13" name="N/C" type="passive"/>
+        <pin num="14" name="P1.4" type="BiDi"/>
+        <pin num="15" name="P1.3" type="BiDi"/>
+        <pin num="16" name="P1.2" type="BiDi"/>
+        <pin num="17" name="P1.1" type="BiDi"/>
+        <pin num="18" name="P1.0" type="BiDi"/>
+        <pin num="19" name="P0.7" type="BiDi"/>
+        <pin num="20" name="P0.6" type="BiDi"/>
+        <pin num="21" name="P0.5" type="BiDi"/>
+        <pin num="22" name="P0.4" type="BiDi"/>
+        <pin num="23" name="P0.3" type="BiDi"/>
+        <pin num="24" name="N/C" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="circus_agent" part="CRCW0402330RFKED">
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">CRCW0402330RFKED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="circus_agent" part="IRLML6244TRPBF">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">IRLML6244TRPBF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+        <pin num="3" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="circus_agent" part="KPA-1606CGCK(GREEN)">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">KPA-1606CGCK(GREEN)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="circus_agent" part="KPA-1606ECR(RED)">
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">KPA-1606ECR(RED)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="circus_agent" part="LP3985">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LP3985</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="input"/>
+        <pin num="2" name="GND" type="input"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="BYPASS" type="input"/>
+        <pin num="5" name="OUT" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="circus_agent" part="M20-9990345">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">M20-9990345</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="circus_agent" part="MC0402X224K6R3CT">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">MC0402X224K6R3CT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="circus_agent" part="MMBT2222LT1G">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">MMBT2222LT1G</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+        <pin num="3" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="circus_agent" part="Motor">
+      <fields>
+        <field name="Reference">M</field>
+        <field name="Value">Motor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="circus_agent" part="PMV65XPEA">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">PMV65XPEA</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="circus_agent" part="PowerClip">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">PowerClip</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="circus_agent" part="SuperCap">
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">SuperCap</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="power_out"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="circus_agent" part="TSOP38438">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TSOP38438</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OUT" type="output"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="Vs" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="circus_agent">
+      <uri>circus_agent.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="ID1">
+      <node ref="U1001" pin="23"/>
+      <node ref="R43" pin="1"/>
+      <node ref="R44" pin="2"/>
+    </net>
+    <net code="2" name="ID0">
+      <node ref="U1001" pin="2"/>
+      <node ref="R41" pin="1"/>
+      <node ref="R42" pin="2"/>
+    </net>
+    <net code="3" name="Net-(C93-Pad2)">
+      <node ref="C93" pin="2"/>
+      <node ref="U91" pin="4"/>
+    </net>
+    <net code="4" name="Net-(R92-Pad2)">
+      <node ref="U91" pin="3"/>
+      <node ref="R92" pin="2"/>
+    </net>
+    <net code="5" name="Net-(C91-Pad2)">
+      <node ref="U91" pin="5"/>
+      <node ref="C91" pin="2"/>
+      <node ref="R91" pin="1"/>
+    </net>
+    <net code="6" name="Net-(R22-Pad1)">
+      <node ref="U21" pin="1"/>
+      <node ref="R22" pin="1"/>
+    </net>
+    <net code="7" name="LEDG">
+      <node ref="U1001" pin="14"/>
+      <node ref="D32" pin="2"/>
+    </net>
+    <net code="8" name="Net-(Q41-Pad3)">
+      <node ref="Q41" pin="3"/>
+      <node ref="R41" pin="2"/>
+      <node ref="R43" pin="2"/>
+    </net>
+    <net code="9" name="Net-(R1003-Pad2)">
+      <node ref="R1003" pin="2"/>
+      <node ref="U1001" pin="8"/>
+    </net>
+    <net code="10" name="Net-(R1001-Pad1)">
+      <node ref="R1001" pin="1"/>
+      <node ref="R1002" pin="2"/>
+      <node ref="U1001" pin="7"/>
+    </net>
+    <net code="11" name="PWR_BM">
+      <node ref="U1001" pin="17"/>
+      <node ref="R14" pin="1"/>
+    </net>
+    <net code="12" name="Net-(Q82-Pad1)">
+      <node ref="Q86" pin="3"/>
+      <node ref="R82" pin="1"/>
+      <node ref="Q82" pin="1"/>
+    </net>
+    <net code="13" name="Net-(Q83-Pad1)">
+      <node ref="R83" pin="1"/>
+      <node ref="Q83" pin="1"/>
+    </net>
+    <net code="14" name="Net-(Q86-Pad1)">
+      <node ref="Q86" pin="1"/>
+      <node ref="R84" pin="1"/>
+    </net>
+    <net code="15" name="Net-(Q81-Pad1)">
+      <node ref="Q81" pin="1"/>
+      <node ref="Q83" pin="3"/>
+      <node ref="R81" pin="1"/>
+    </net>
+    <net code="16" name="VDD">
+      <node ref="C1002" pin="2"/>
+      <node ref="Q21" pin="2"/>
+      <node ref="Q41" pin="2"/>
+      <node ref="R45" pin="2"/>
+      <node ref="R91" pin="2"/>
+      <node ref="C1001" pin="2"/>
+      <node ref="R1001" pin="2"/>
+      <node ref="R23" pin="2"/>
+      <node ref="U1001" pin="6"/>
+      <node ref="U1001" pin="4"/>
+    </net>
+    <net code="17" name="Net-(Q12-Pad1)">
+      <node ref="R14" pin="2"/>
+      <node ref="Q12" pin="1"/>
+    </net>
+    <net code="18" name="+BATT">
+      <node ref="Q82" pin="2"/>
+      <node ref="U91" pin="1"/>
+      <node ref="C92" pin="2"/>
+      <node ref="R92" pin="1"/>
+      <node ref="Q81" pin="2"/>
+      <node ref="R63" pin="1"/>
+      <node ref="Q72" pin="2"/>
+      <node ref="Q11" pin="2"/>
+      <node ref="R71" pin="2"/>
+      <node ref="R12" pin="2"/>
+      <node ref="Q71" pin="2"/>
+      <node ref="C51" pin="2"/>
+      <node ref="R81" pin="2"/>
+      <node ref="R72" pin="2"/>
+      <node ref="R82" pin="2"/>
+    </net>
+    <net code="19" name="BM">
+      <node ref="U1001" pin="18"/>
+      <node ref="R11" pin="1"/>
+      <node ref="R13" pin="2"/>
+    </net>
+    <net code="20" name="Net-(Q11-Pad1)">
+      <node ref="R12" pin="1"/>
+      <node ref="Q11" pin="1"/>
+      <node ref="Q12" pin="3"/>
+    </net>
+    <net code="21" name="Net-(D32-Pad1)">
+      <node ref="R32" pin="1"/>
+      <node ref="D32" pin="1"/>
+    </net>
+    <net code="22" name="Net-(D31-Pad1)">
+      <node ref="R31" pin="1"/>
+      <node ref="D31" pin="1"/>
+    </net>
+    <net code="23" name="Net-(Q11-Pad3)">
+      <node ref="R11" pin="2"/>
+      <node ref="Q11" pin="3"/>
+    </net>
+    <net code="24" name="GND">
+      <node ref="Q75" pin="2"/>
+      <node ref="Q73" pin="2"/>
+      <node ref="Q74" pin="2"/>
+      <node ref="C1002" pin="1"/>
+      <node ref="Q86" pin="2"/>
+      <node ref="Q76" pin="2"/>
+      <node ref="Q85" pin="2"/>
+      <node ref="R44" pin="1"/>
+      <node ref="Q84" pin="2"/>
+      <node ref="C1001" pin="1"/>
+      <node ref="J63" pin="1"/>
+      <node ref="J64" pin="1"/>
+      <node ref="Q12" pin="2"/>
+      <node ref="R13" pin="1"/>
+      <node ref="Q83" pin="2"/>
+      <node ref="J1001" pin="1"/>
+      <node ref="U1001" pin="3"/>
+      <node ref="U1001" pin="5"/>
+      <node ref="C21" pin="1"/>
+      <node ref="R62" pin="1"/>
+      <node ref="R31" pin="2"/>
+      <node ref="C51" pin="1"/>
+      <node ref="U21" pin="2"/>
+      <node ref="C93" pin="1"/>
+      <node ref="C91" pin="1"/>
+      <node ref="R42" pin="1"/>
+      <node ref="J1002" pin="1"/>
+      <node ref="U91" pin="2"/>
+      <node ref="C92" pin="1"/>
+      <node ref="R32" pin="2"/>
+    </net>
+    <net code="25" name="Net-(J61-Pad1)">
+      <node ref="J62" pin="1"/>
+      <node ref="R63" pin="2"/>
+      <node ref="R61" pin="2"/>
+      <node ref="J61" pin="1"/>
+    </net>
+    <net code="26" name="Net-(J1001-Pad2)">
+      <node ref="R1003" pin="1"/>
+      <node ref="J1001" pin="2"/>
+    </net>
+    <net code="27" name="Net-(J1001-Pad3)">
+      <node ref="R1002" pin="1"/>
+      <node ref="J1001" pin="3"/>
+    </net>
+    <net code="28" name="IR">
+      <node ref="U1001" pin="21"/>
+      <node ref="J1002" pin="2"/>
+      <node ref="R22" pin="2"/>
+    </net>
+    <net code="29" name="CHG">
+      <node ref="R62" pin="2"/>
+      <node ref="U1001" pin="20"/>
+      <node ref="R61" pin="1"/>
+    </net>
+    <net code="30" name="LM_RVR">
+      <node ref="U1001" pin="10"/>
+      <node ref="R73" pin="2"/>
+      <node ref="Q75" pin="1"/>
+    </net>
+    <net code="31" name="RM_FWD">
+      <node ref="U1001" pin="11"/>
+      <node ref="R83" pin="2"/>
+      <node ref="Q85" pin="1"/>
+    </net>
+    <net code="32" name="nPWR_IR">
+      <node ref="Q21" pin="1"/>
+      <node ref="U1001" pin="19"/>
+      <node ref="R23" pin="1"/>
+    </net>
+    <net code="33" name="MCU_TX">
+      <node ref="J1002" pin="3"/>
+      <node ref="U1001" pin="22"/>
+    </net>
+    <net code="34" name="nPWR_ID">
+      <node ref="Q41" pin="1"/>
+      <node ref="R45" pin="1"/>
+      <node ref="U1001" pin="15"/>
+    </net>
+    <net code="35" name="LEDR">
+      <node ref="D31" pin="2"/>
+      <node ref="U1001" pin="16"/>
+    </net>
+    <net code="36" name="RM_RVR">
+      <node ref="U1001" pin="12"/>
+      <node ref="Q84" pin="1"/>
+      <node ref="R84" pin="2"/>
+    </net>
+    <net code="37" name="LM_FWD">
+      <node ref="Q74" pin="1"/>
+      <node ref="R74" pin="2"/>
+      <node ref="U1001" pin="9"/>
+    </net>
+    <net code="38" name="Net-(U1001-Pad24)">
+      <node ref="U1001" pin="24"/>
+    </net>
+    <net code="39" name="Net-(U1001-Pad13)">
+      <node ref="U1001" pin="13"/>
+    </net>
+    <net code="40" name="Net-(U1001-Pad1)">
+      <node ref="U1001" pin="1"/>
+    </net>
+    <net code="41" name="Net-(M71-Pad2)">
+      <node ref="Q74" pin="3"/>
+      <node ref="Q71" pin="3"/>
+      <node ref="M71" pin="2"/>
+    </net>
+    <net code="42" name="Net-(M71-Pad1)">
+      <node ref="Q72" pin="3"/>
+      <node ref="M71" pin="1"/>
+      <node ref="Q75" pin="3"/>
+    </net>
+    <net code="43" name="Net-(Q73-Pad1)">
+      <node ref="R73" pin="1"/>
+      <node ref="Q73" pin="1"/>
+    </net>
+    <net code="44" name="Net-(Q76-Pad1)">
+      <node ref="Q76" pin="1"/>
+      <node ref="R74" pin="1"/>
+    </net>
+    <net code="45" name="Net-(C21-Pad2)">
+      <node ref="C21" pin="2"/>
+      <node ref="R21" pin="2"/>
+      <node ref="U21" pin="3"/>
+    </net>
+    <net code="46" name="Net-(Q21-Pad3)">
+      <node ref="Q21" pin="3"/>
+      <node ref="R21" pin="1"/>
+    </net>
+    <net code="47" name="Net-(Q71-Pad1)">
+      <node ref="Q71" pin="1"/>
+      <node ref="R71" pin="1"/>
+      <node ref="Q73" pin="3"/>
+    </net>
+    <net code="48" name="Net-(M81-Pad2)">
+      <node ref="Q81" pin="3"/>
+      <node ref="Q84" pin="3"/>
+      <node ref="M81" pin="2"/>
+    </net>
+    <net code="49" name="Net-(Q72-Pad1)">
+      <node ref="Q76" pin="3"/>
+      <node ref="R72" pin="1"/>
+      <node ref="Q72" pin="1"/>
+    </net>
+    <net code="50" name="Net-(M81-Pad1)">
+      <node ref="M81" pin="1"/>
+      <node ref="Q85" pin="3"/>
+      <node ref="Q82" pin="3"/>
+    </net>
+  </nets>
+</export>
