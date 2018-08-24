@@ -1,0 +1,201 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:circus_agent
+LIBS:circus_broadcast
+LIBS:circus_broadcast-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L C8051F850-C-GU U?
+U 1 1 5B736A8D
+P 6250 3750
+F 0 "U?" H 6500 4800 60  0000 C CNN
+F 1 "C8051F850-C-GU" H 6900 3450 60  0000 C CNN
+F 2 "" H 6250 3750 60  0001 C CNN
+F 3 "" H 6250 3750 60  0001 C CNN
+	1    6250 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L TSUS4300 D?
+U 1 1 5B748A41
+P 8850 2250
+F 0 "D?" H 9150 2550 60  0000 C CNN
+F 1 "TSUS4300" H 9300 2450 60  0000 C CNN
+F 2 "" H 8850 2250 60  0001 C CNN
+F 3 "" H 8850 2250 60  0001 C CNN
+	1    8850 2250
+	1    0    0    -1  
+$EndComp
+Text Notes 8000 2000 0    60   ~ 0
+1.2V @ 30mA
+$Comp
+L TSUS4300 D?
+U 1 1 5B75B589
+P 8850 2800
+F 0 "D?" H 9150 3100 60  0000 C CNN
+F 1 "TSUS4300" H 9300 3000 60  0000 C CNN
+F 2 "" H 8850 2800 60  0001 C CNN
+F 3 "" H 8850 2800 60  0001 C CNN
+	1    8850 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L TSUS4300 D?
+U 1 1 5B75B5C6
+P 8850 3350
+F 0 "D?" H 9150 3650 60  0000 C CNN
+F 1 "TSUS4300" H 9300 3550 60  0000 C CNN
+F 2 "" H 8850 3350 60  0001 C CNN
+F 3 "" H 8850 3350 60  0001 C CNN
+	1    8850 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L TSUS4300 D?
+U 1 1 5B75BF77
+P 8850 3900
+F 0 "D?" H 9150 4200 60  0000 C CNN
+F 1 "TSUS4300" H 9300 4100 60  0000 C CNN
+F 2 "" H 8850 3900 60  0001 C CNN
+F 3 "" H 8850 3900 60  0001 C CNN
+	1    8850 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L TSUS4300 D?
+U 1 1 5B75BFB6
+P 8850 4450
+F 0 "D?" H 9150 4750 60  0000 C CNN
+F 1 "TSUS4300" H 9300 4650 60  0000 C CNN
+F 2 "" H 8850 4450 60  0001 C CNN
+F 3 "" H 8850 4450 60  0001 C CNN
+	1    8850 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L TSUS4300 D?
+U 1 1 5B75BFEE
+P 8850 5000
+F 0 "D?" H 9150 5300 60  0000 C CNN
+F 1 "TSUS4300" H 9300 5200 60  0000 C CNN
+F 2 "" H 8850 5000 60  0001 C CNN
+F 3 "" H 8850 5000 60  0001 C CNN
+	1    8850 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L TS321 U?
+U 1 1 5B7FB507
+P 2800 2850
+F 0 "U?" H 3250 3350 60  0000 C CNN
+F 1 "TS321" H 3300 3000 60  0000 C CNN
+F 2 "" H 2650 2850 60  0001 C CNN
+F 3 "" H 2650 2850 60  0001 C CNN
+	1    2800 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L PMV65XPEA Q?
+U 1 1 5B7FB69E
+P 3550 1950
+F 0 "Q?" V 4400 2550 60  0000 C CNN
+F 1 "PMV65XPEA" V 4250 2350 60  0000 C CNN
+F 2 "" H 3550 1850 60  0001 C CNN
+F 3 "" H 3550 1850 60  0001 C CNN
+	1    3550 1950
+	0    1    -1   0   
+$EndComp
+$Comp
+L CRCW0402330RFKED R?
+U 1 1 5B7FB876
+P 1850 1500
+F 0 "R?" V 1650 1800 60  0000 C CNN
+F 1 "R" V 1650 1950 60  0000 C CNN
+F 2 "" H 1850 1500 60  0001 C CNN
+F 3 "" H 1850 1500 60  0001 C CNN
+	1    1850 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 1950 3750 2500
+Wire Wire Line
+	3750 2500 3550 2500
+Wire Wire Line
+	2500 1550 3550 1550
+Wire Wire Line
+	2800 2400 2600 2400
+Wire Wire Line
+	2600 2400 2600 1550
+Connection ~ 2600 1550
+$Comp
+L CRCW0402330RFKED R?
+U 1 1 5B7FBA8A
+P 1450 1850
+F 0 "R?" V 1300 2100 60  0000 C CNN
+F 1 "R" V 1250 2300 60  0000 C CNN
+F 2 "" H 1450 1850 60  0001 C CNN
+F 3 "" H 1450 1850 60  0001 C CNN
+	1    1450 1850
+	-1   0    0    1   
+$EndComp
+$Comp
+L CRCW0402330RFKED R?
+U 1 1 5B7FBBF8
+P 1450 2700
+F 0 "R?" V 1300 2950 60  0000 C CNN
+F 1 "R" V 1250 3150 60  0000 C CNN
+F 2 "" H 1450 2700 60  0001 C CNN
+F 3 "" H 1450 2700 60  0001 C CNN
+	1    1450 2700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2800 2600 1400 2600
+Wire Wire Line
+	1400 2500 1400 2700
+Connection ~ 1400 2600
+$EndSCHEMATC
