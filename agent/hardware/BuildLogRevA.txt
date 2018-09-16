@@ -1,0 +1,5 @@
+   - The holes for the motor wire are way too big
+   - The holes for the 3-way debug headers are too small and won't takw the compoent
+   - When powering off the programmer it fails when the H bridge is populated
+   - Need a silkscreen box to wrote the ID on
+   - Replace the debug header with some polarised pads so pogo pins can be added
