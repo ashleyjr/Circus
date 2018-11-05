@@ -891,7 +891,7 @@
   )
 
   (module circus_broadcast:0603 (layer F.Cu) (tedit 5BC8FAC3) (tstamp 5BE0ACCC)
-    (at 101.3 154.3)
+    (at 3.5 0.2)
     (path /5BB2B921)
     (fp_text reference C201 (at 5.1 -1.6) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -906,7 +906,7 @@
   )
 
   (module circus_broadcast:0603 (layer F.Cu) (tedit 5BC8FAC3) (tstamp 5BE0ACD2)
-    (at 98.15 156.65)
+    (at 0.35 2.55)
     (path /5BB2B93D)
     (fp_text reference C202 (at 5.1 -1.6) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -921,7 +921,7 @@
   )
 
   (module circus_broadcast:0603 (layer F.Cu) (tedit 5BC8FAC3) (tstamp 5BE0ACD8)
-    (at 94.5 153.35)
+    (at -3.3 -0.75)
     (path /5BB2A72B)
     (fp_text reference C301 (at 5.1 -1.6) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -936,7 +936,7 @@
   )
 
   (module circus_broadcast:0603 (layer F.Cu) (tedit 5BC8FAC3) (tstamp 5BE0ACDE)
-    (at 97.8 154.1)
+    (at 0 0)
     (path /5BB2AE09)
     (fp_text reference C302 (at 5.1 -1.6) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -951,7 +951,7 @@
   )
 
   (module circus_broadcast:0603 (layer F.Cu) (tedit 5BC8FAC3) (tstamp 5BE0ACE4)
-    (at 97.8 154.1)
+    (at 0 0)
     (path /5BB3CBD4)
     (fp_text reference C401 (at 5.1 -1.6) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -966,7 +966,7 @@
   )
 
   (module circus_broadcast:0603 (layer F.Cu) (tedit 5BC8FAC3) (tstamp 5BE0ACEA)
-    (at 97.8 154.1)
+    (at 0 0)
     (path /5BBA44B9)
     (fp_text reference C501 (at 5.1 -1.6) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -981,7 +981,7 @@
   )
 
   (module circus_broadcast:0603 (layer F.Cu) (tedit 5BC8FAC3) (tstamp 5BE0ACF0)
-    (at 97.8 154.1)
+    (at 0 0)
     (path /5BB29446)
     (fp_text reference C601 (at 5.1 -1.6) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -996,7 +996,7 @@
   )
 
   (module circus_broadcast:Keystone2238 (layer F.Cu) (tedit 5BDF5371) (tstamp 5BE0ACF6)
-    (at 94.9 155.75)
+    (at -2.9 1.65)
     (path /5BC6E33A)
     (fp_text reference J101 (at -2.7 4) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1011,7 +1011,7 @@
   )
 
   (module circus_broadcast:TestPoint (layer F.Cu) (tedit 5BC8F940) (tstamp 5BE0AD00)
-    (at 100.7 149.35)
+    (at 2.9 -4.75)
     (path /5BB4397D)
     (fp_text reference T101 (at 3.3 1.3) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1024,7 +1024,7 @@
   )
 
   (module circus_broadcast:TestPoint (layer F.Cu) (tedit 5BC8F940) (tstamp 5BE0AD05)
-    (at 97.8 154.1)
+    (at 0 0)
     (path /5BB4176C)
     (fp_text reference T401 (at 3.3 1.3) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1037,7 +1037,7 @@
   )
 
   (module circus_broadcast:TestPoint (layer F.Cu) (tedit 5BC8F940) (tstamp 5BE0AD0A)
-    (at 97.8 154.1)
+    (at 0 0)
     (path /5BB41675)
     (fp_text reference T402 (at 3.3 1.3) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
@@ -1050,7 +1050,7 @@
   )
 
   (module circus_broadcast:M20-9990445 (layer F.Cu) (tedit 5BE0AFAD) (tstamp 5BE0BBAB)
-    (at 97.8 154.1)
+    (at 0 0)
     (path /5BE0DCD3)
     (fp_text reference J401 (at -3.4 -0.3) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
