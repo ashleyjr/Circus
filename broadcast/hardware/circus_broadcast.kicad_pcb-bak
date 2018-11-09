@@ -3,9 +3,9 @@
   (general
     (links 89)
     (no_connects 0)
-    (area 16.770481 132.785 95.029519 167.207143)
+    (area 16.764 132.785 95.029519 167.207143)
     (thickness 1.6)
-    (drawings 50)
+    (drawings 48)
     (tracks 387)
     (zones 0)
     (modules 49)
@@ -14,11 +14,11 @@
 
   (page A4)
   (layers
-    (0 F.Cu signal hide)
-    (31 B.Cu signal)
+    (0 F.Cu signal)
+    (31 B.Cu signal hide)
     (32 B.Adhes user)
     (33 F.Adhes user)
-    (34 B.Paste user)
+    (34 B.Paste user hide)
     (35 F.Paste user)
     (36 B.SilkS user)
     (37 F.SilkS user)
@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 0.9)
+    (last_trace_width 0.25)
     (user_trace_width 0.25)
     (user_trace_width 0.3)
     (user_trace_width 0.4)
@@ -70,9 +70,9 @@
     (pad_drill 0.762)
     (pad_to_mask_clearance 0.2)
     (aux_axis_origin 0 0)
-    (visible_elements FFFCFF7F)
+    (visible_elements FFFEFF7F)
     (pcbplotparams
-      (layerselection 0x00030_80000001)
+      (layerselection 0x010f0_80000001)
       (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.100000)
@@ -93,9 +93,9 @@
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory CircusBroadcastRevAGerbers/))
   )
 
   (net 0 "")
@@ -199,10 +199,10 @@
     (add_net PWM2)
   )
 
-  (module circus_agent:0402 (layer F.Cu) (tedit 5B4A2969) (tstamp 5BC8F170)
+  (module circus_agent:0402 (layer F.Cu) (tedit 5BE5FD7C) (tstamp 5BC8F170)
     (at 60.96 154.94 180)
     (path /5BB2A2E4)
-    (fp_text reference R301 (at 1.2 -1.6 180) (layer F.SilkS)
+    (fp_text reference R301 (at 1.2 -1.6 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 11K (at 0.8 1.6 180) (layer F.Fab)
@@ -215,10 +215,10 @@
       (net 40 +5V))
   )
 
-  (module circus_agent:0402 (layer F.Cu) (tedit 5B4A2969) (tstamp 5BC8F176)
+  (module circus_agent:0402 (layer F.Cu) (tedit 5BE5FD79) (tstamp 5BC8F176)
     (at 57.785 154.94 180)
     (path /5BB2A39E)
-    (fp_text reference R302 (at 1.2 -1.6 180) (layer F.SilkS)
+    (fp_text reference R302 (at 1.2 -1.6 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 33K (at 0.8 1.6 180) (layer F.Fab)
@@ -231,10 +231,10 @@
       (net 9 "Net-(R301-Pad2)"))
   )
 
-  (module circus_agent:0402 (layer F.Cu) (tedit 5B4A2969) (tstamp 5BC8F17C)
+  (module circus_agent:0402 (layer F.Cu) (tedit 5BE5FD6B) (tstamp 5BC8F17C)
     (at 40.64 154.94 270)
     (path /5BB2BD88)
-    (fp_text reference R303 (at 1.2 -1.6 270) (layer F.SilkS)
+    (fp_text reference R303 (at 1.2 -1.6 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 24R (at 0.8 1.6 270) (layer F.Fab)
@@ -247,10 +247,10 @@
       (net 11 "Net-(R303-Pad1)"))
   )
 
-  (module circus_agent:0402 (layer F.Cu) (tedit 5B4A2969) (tstamp 5BC8F182)
+  (module circus_agent:0402 (layer F.Cu) (tedit 5BE5FD66) (tstamp 5BC8F182)
     (at 45.72 154.94 270)
     (path /5BBC8FB2)
-    (fp_text reference R304 (at 1.2 -1.6 270) (layer F.SilkS)
+    (fp_text reference R304 (at 2.032 -0.508 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 24R (at 0.8 1.6 270) (layer F.Fab)
@@ -263,10 +263,10 @@
       (net 11 "Net-(R303-Pad1)"))
   )
 
-  (module circus_agent:M20-9990345 (layer F.Cu) (tedit 5B4A2726) (tstamp 5BC8F5DC)
+  (module circus_agent:M20-9990345 (layer F.Cu) (tedit 5BE5FE55) (tstamp 5BC8F5DC)
     (at 55.88 160.02)
     (path /5BB4B6B2)
-    (fp_text reference J301 (at -1.016 1.778) (layer F.SilkS)
+    (fp_text reference J301 (at 2.54 2.286) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value M20-9990345 (at 1.6 3.5) (layer F.Fab)
@@ -280,10 +280,10 @@
       (net 2 GND))
   )
 
-  (module circus_agent:M20-9990345 (layer F.Cu) (tedit 5B4A2726) (tstamp 5BC8F5E3)
+  (module circus_agent:M20-9990345 (layer F.Cu) (tedit 5BE5FE52) (tstamp 5BC8F5E3)
     (at 40.64 160.02)
     (path /5BB4B300)
-    (fp_text reference J302 (at -1.016 1.778) (layer F.SilkS)
+    (fp_text reference J302 (at 2.794 2.286) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value M20-9990345 (at 1.6 3.5) (layer F.Fab)
@@ -297,10 +297,10 @@
       (net 10 "Net-(J302-Pad1)"))
   )
 
-  (module circus_broadcast:LM317DCY (layer F.Cu) (tedit 5BC8F792) (tstamp 5BC8F955)
+  (module circus_broadcast:LM317DCY (layer F.Cu) (tedit 5BE5FC56) (tstamp 5BC8F955)
     (at 63.5 160.02)
     (path /5BB2A1FA)
-    (fp_text reference U301 (at 8.5 -5) (layer F.SilkS)
+    (fp_text reference U301 (at 1.016 -3.556) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value LM317DCY (at 10.2 -3.1) (layer F.Fab)
@@ -320,10 +320,10 @@
       (net 40 +5V))
   )
 
-  (module circus_broadcast:LM317DCY (layer F.Cu) (tedit 5BC8F792) (tstamp 5BC8F961)
+  (module circus_broadcast:LM317DCY (layer F.Cu) (tedit 5BE5FD5D) (tstamp 5BC8F961)
     (at 48.26 160.02)
     (path /5BB2BD8E)
-    (fp_text reference U302 (at 8.5 -5) (layer F.SilkS)
+    (fp_text reference U302 (at 1.778 -3.302) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value LM317DCY (at 10.2 -3.1) (layer F.Fab)
@@ -343,10 +343,10 @@
       (net 11 "Net-(R303-Pad1)"))
   )
 
-  (module circus_agent:KPA (layer F.Cu) (tedit 5B4A429A) (tstamp 5BC8F14A)
+  (module circus_agent:KPA (layer F.Cu) (tedit 5BE5FD8D) (tstamp 5BC8F14A)
     (at 39.9 136.3)
     (path /5BC6891F)
-    (fp_text reference D901 (at -2.54 1.27) (layer F.SilkS)
+    (fp_text reference D901 (at 4.296 -0.41) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value "KPA-1606CGCK(GREEN)" (at -2.54 -2.54) (layer F.Fab)
@@ -362,10 +362,10 @@
       (net 2 GND))
   )
 
-  (module circus_agent:KPA (layer F.Cu) (tedit 5B4A429A) (tstamp 5BC8F150)
+  (module circus_agent:KPA (layer F.Cu) (tedit 5BE5FD96) (tstamp 5BC8F150)
     (at 70.2 136.3)
     (path /5BC6993A)
-    (fp_text reference D902 (at -2.54 1.27) (layer F.SilkS)
+    (fp_text reference D902 (at -2.89 -0.156) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value "KPA-1606ECR(RED)" (at -2.54 -2.54) (layer F.Fab)
@@ -381,10 +381,10 @@
       (net 2 GND))
   )
 
-  (module circus_agent:IRLML6244TRPBF (layer F.Cu) (tedit 5B4A4627) (tstamp 5BC8F157)
+  (module circus_agent:IRLML6244TRPBF (layer F.Cu) (tedit 5BE5FD30) (tstamp 5BC8F157)
     (at 80.15 143.8 270)
     (path /5BB27EF8)
-    (fp_text reference Q701 (at -4.3 -3.9 270) (layer F.SilkS)
+    (fp_text reference Q701 (at 3.52 -3.924 360) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value IRLML6244TRPBF (at -0.7 2.9 270) (layer F.Fab)
@@ -407,10 +407,10 @@
       (net 5 PWM1))
   )
 
-  (module circus_agent:IRLML6244TRPBF (layer F.Cu) (tedit 5B4A4627) (tstamp 5BC8F15E)
+  (module circus_agent:IRLML6244TRPBF (layer F.Cu) (tedit 5BE5FC11) (tstamp 5BC8F15E)
     (at 31.6 154.2 90)
     (path /5BBA8A92)
-    (fp_text reference Q801 (at -4.3 -3.9 90) (layer F.SilkS)
+    (fp_text reference Q801 (at -3.026 0.15 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value IRLML6244TRPBF (at -0.7 2.9 90) (layer F.Fab)
@@ -433,10 +433,10 @@
       (net 7 PWM2))
   )
 
-  (module circus_agent:0402 (layer F.Cu) (tedit 5B4A2969) (tstamp 5BC8F164)
+  (module circus_agent:0402 (layer F.Cu) (tedit 5BE5FDA6) (tstamp 5BC8F164)
     (at 60.96 146.685 270)
     (path /5BB2B906)
-    (fp_text reference R201 (at 1.2 -1.6 270) (layer F.SilkS)
+    (fp_text reference R201 (at 1.2 -1.6 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 11K (at 0.8 1.6 270) (layer F.Fab)
@@ -449,10 +449,10 @@
       (net 13 +3V3))
   )
 
-  (module circus_agent:0402 (layer F.Cu) (tedit 5B4A2969) (tstamp 5BC8F16A)
+  (module circus_agent:0402 (layer F.Cu) (tedit 5BE5FD52) (tstamp 5BC8F16A)
     (at 60.96 149.225 270)
     (path /5BB2B90C)
-    (fp_text reference R202 (at 1.2 -1.6 270) (layer F.SilkS)
+    (fp_text reference R202 (at 1.143 2.032 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 18K (at 0.8 1.6 270) (layer F.Fab)
@@ -465,10 +465,10 @@
       (net 8 "Net-(R201-Pad2)"))
   )
 
-  (module circus_agent:0402 (layer F.Cu) (tedit 5B4A2969) (tstamp 5BC8F188)
+  (module circus_agent:0402 (layer F.Cu) (tedit 5BE5FE37) (tstamp 5BC8F188)
     (at 52.07 142.24 90)
     (path /5BB3D43F)
-    (fp_text reference R401 (at 1.2 -1.6 90) (layer F.SilkS)
+    (fp_text reference R401 (at 1.778 2.794 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 1K (at 0.8 1.6 90) (layer F.Fab)
@@ -481,10 +481,10 @@
       (net 13 +3V3))
   )
 
-  (module circus_agent:0402 (layer F.Cu) (tedit 5B4A2969) (tstamp 5BC8F18E)
+  (module circus_agent:0402 (layer F.Cu) (tedit 5BE5FE3A) (tstamp 5BC8F18E)
     (at 49.53 142.24 90)
     (path /5BB3D54D)
-    (fp_text reference R402 (at 1.2 -1.6 90) (layer F.SilkS)
+    (fp_text reference R402 (at -0.254 -3.048 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 1K (at 0.8 1.6 90) (layer F.Fab)
@@ -497,10 +497,10 @@
       (net 12 "Net-(R401-Pad2)"))
   )
 
-  (module circus_agent:0402 (layer F.Cu) (tedit 5B4A2969) (tstamp 5BC8F194)
+  (module circus_agent:0402 (layer F.Cu) (tedit 5BE5FD82) (tstamp 5BC8F194)
     (at 41.91 142.494 90)
     (path /5BB3D5D2)
-    (fp_text reference R403 (at 1.2 -1.6 90) (layer F.SilkS)
+    (fp_text reference R403 (at 0.762 -1.016 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 1K (at 0.8 1.6 90) (layer F.Fab)
@@ -513,10 +513,10 @@
       (net 14 "Net-(R403-Pad1)"))
   )
 
-  (module circus_agent:0402 (layer F.Cu) (tedit 5B4A2969) (tstamp 5BC8F19A)
+  (module circus_agent:0402 (layer F.Cu) (tedit 5BE5FC3D) (tstamp 5BC8F19A)
     (at 74.45 154.05)
     (path /5BBA44A7)
-    (fp_text reference R501 (at 1.2 -1.6) (layer F.SilkS)
+    (fp_text reference R501 (at 1.242 3.43) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 43R (at 0.8 1.6) (layer F.Fab)
@@ -529,10 +529,10 @@
       (net 16 "Net-(R501-Pad1)"))
   )
 
-  (module circus_agent:0402 (layer F.Cu) (tedit 5B4A2969) (tstamp 5BC8F1A0)
+  (module circus_agent:0402 (layer F.Cu) (tedit 5BE5FC18) (tstamp 5BC8F1A0)
     (at 37.2 144.05 180)
     (path /5BB285FE)
-    (fp_text reference R601 (at 1.2 -1.6 180) (layer F.SilkS)
+    (fp_text reference R601 (at 0.878 3.08 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 43R (at 0.8 1.6 180) (layer F.Fab)
@@ -545,10 +545,10 @@
       (net 18 "Net-(R601-Pad1)"))
   )
 
-  (module circus_agent:0402 (layer F.Cu) (tedit 5B4A2969) (tstamp 5BC8F1A6)
+  (module circus_agent:0402 (layer F.Cu) (tedit 5BE5FD6D) (tstamp 5BC8F1A6)
     (at 41.275 152.4 270)
     (path /5BC65372)
-    (fp_text reference R901 (at 1.2 -1.6 270) (layer F.SilkS)
+    (fp_text reference R901 (at 1.2 -1.6 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 750R (at 0.8 1.6 270) (layer F.Fab)
@@ -561,10 +561,10 @@
       (net 20 0.26ADC))
   )
 
-  (module circus_agent:0402 (layer F.Cu) (tedit 5B4A2969) (tstamp 5BC8F1AC)
+  (module circus_agent:0402 (layer F.Cu) (tedit 5BE5FD6F) (tstamp 5BC8F1AC)
     (at 42.545 152.4 270)
     (path /5BC65443)
-    (fp_text reference R902 (at 1.2 -1.6 270) (layer F.SilkS)
+    (fp_text reference R902 (at 1.2 -1.6 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 270R (at 0.8 1.6 270) (layer F.Fab)
@@ -577,10 +577,10 @@
       (net 20 0.26ADC))
   )
 
-  (module circus_agent:0402 (layer F.Cu) (tedit 5B4A2969) (tstamp 5BC8F1B2)
+  (module circus_agent:0402 (layer F.Cu) (tedit 5BE5FD85) (tstamp 5BC8F1B2)
     (at 41.91 139.7 90)
     (path /5BC6A15A)
-    (fp_text reference R903 (at 1.2 -1.6 90) (layer F.SilkS)
+    (fp_text reference R903 (at -0.762 2.032 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 33R (at 0.8 1.6 90) (layer F.Fab)
@@ -593,10 +593,10 @@
       (net 21 LEDG))
   )
 
-  (module circus_agent:0402 (layer F.Cu) (tedit 5B4A2969) (tstamp 5BC8F1B8)
+  (module circus_agent:0402 (layer F.Cu) (tedit 5BE5FCDF) (tstamp 5BC8F1B8)
     (at 71.12 138.43 270)
     (path /5BC6A3A1)
-    (fp_text reference R904 (at 1.2 -1.6 270) (layer F.SilkS)
+    (fp_text reference R904 (at 2.286 0.508 360) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 39R (at 0.8 1.6 270) (layer F.Fab)
@@ -609,10 +609,10 @@
       (net 3 "Net-(D902-Pad2)"))
   )
 
-  (module circus_agent:C8051F850-C-GU (layer F.Cu) (tedit 5B3F84B1) (tstamp 5BC8F1D4)
+  (module circus_agent:C8051F850-C-GU (layer F.Cu) (tedit 5BE5FC8D) (tstamp 5BC8F1D4)
     (at 40.64 144.78 270)
     (path /5B736A8D)
-    (fp_text reference U401 (at -5.08 -1.27 270) (layer F.SilkS)
+    (fp_text reference U401 (at 2.032 -3.048 360) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value C8051F850-C-GU (at -1.27 7.62 270) (layer F.Fab)
@@ -668,10 +668,10 @@
       (net 33 "Net-(U401-Pad1)"))
   )
 
-  (module circus_agent:0402 (layer F.Cu) (tedit 5B4A2969) (tstamp 5BC8F59D)
+  (module circus_agent:0402 (layer F.Cu) (tedit 5BE5FD9E) (tstamp 5BC8F59D)
     (at 49.53 149.86 90)
     (path /5BB3CD87)
-    (fp_text reference C402 (at 1.2 -1.6 90) (layer F.SilkS)
+    (fp_text reference C402 (at 1.2 -1.6 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value "100nF, 6.3V" (at 0.8 1.6 90) (layer F.Fab)
@@ -684,10 +684,10 @@
       (net 2 GND))
   )
 
-  (module circus_broadcast:TSUS4300 (layer F.Cu) (tedit 5BCCEA67) (tstamp 5BC8F5A4)
+  (module circus_broadcast:TSUS4300 (layer F.Cu) (tedit 5BE5FD18) (tstamp 5BC8F5A4)
     (at 85.65 156.95 210)
     (path /5BBA844E)
-    (fp_text reference D701 (at 6.35 1.27 210) (layer F.SilkS)
+    (fp_text reference D701 (at 5.26059 -1.387609 210) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value TSUS4300 (at 7.62 -1.27 210) (layer F.Fab)
@@ -699,10 +699,10 @@
       (net 15 CC1))
   )
 
-  (module circus_broadcast:TSUS4300 (layer F.Cu) (tedit 5BCCEA65) (tstamp 5BC8F5AB)
+  (module circus_broadcast:TSUS4300 (layer F.Cu) (tedit 5BE5FD1D) (tstamp 5BC8F5AB)
     (at 89.55 151.65 240)
     (path /5BBA83B8)
-    (fp_text reference D702 (at 6.35 1.27 240) (layer F.SilkS)
+    (fp_text reference D702 (at 6.35 1.27 240) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value TSUS4300 (at 7.62 -1.27 240) (layer F.Fab)
@@ -714,10 +714,10 @@
       (net 34 "Net-(D701-Pad1)"))
   )
 
-  (module circus_broadcast:TSUS4300 (layer F.Cu) (tedit 5BCCEA62) (tstamp 5BC8F5B2)
+  (module circus_broadcast:TSUS4300 (layer F.Cu) (tedit 5BE5FD23) (tstamp 5BC8F5B2)
     (at 88.35 144.65 290)
     (path /5BBA82C5)
-    (fp_text reference D703 (at 6.35 1.27 290) (layer F.SilkS)
+    (fp_text reference D703 (at 6.35 1.27 290) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value TSUS4300 (at 7.62 -1.27 290) (layer F.Fab)
@@ -729,10 +729,10 @@
       (net 35 "Net-(D702-Pad1)"))
   )
 
-  (module circus_broadcast:TSUS4300 (layer F.Cu) (tedit 5BCCEA5F) (tstamp 5BC8F5B9)
+  (module circus_broadcast:TSUS4300 (layer F.Cu) (tedit 5BE5FD28) (tstamp 5BC8F5B9)
     (at 83.95 140.15 330)
     (path /5B75BFEE)
-    (fp_text reference D704 (at 6.35 1.27 330) (layer F.SilkS)
+    (fp_text reference D704 (at 6.35 1.27 330) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value TSUS4300 (at 7.62 -1.27 330) (layer F.Fab)
@@ -744,10 +744,10 @@
       (net 36 "Net-(D703-Pad1)"))
   )
 
-  (module circus_broadcast:TSUS4300 (layer F.Cu) (tedit 5BCCEA59) (tstamp 5BC8F5C0)
+  (module circus_broadcast:TSUS4300 (layer F.Cu) (tedit 5BE5FD0A) (tstamp 5BC8F5C0)
     (at 25.9 141.3 30)
     (path /5BBA8AB2)
-    (fp_text reference D801 (at 6.35 1.27 30) (layer F.SilkS)
+    (fp_text reference D801 (at 6.35 1.27 30) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value TSUS4300 (at 7.62 -1.27 30) (layer F.Fab)
@@ -759,10 +759,10 @@
       (net 17 CC2))
   )
 
-  (module circus_broadcast:TSUS4300 (layer F.Cu) (tedit 5BCCEA55) (tstamp 5BC8F5C7)
+  (module circus_broadcast:TSUS4300 (layer F.Cu) (tedit 5BE5FD05) (tstamp 5BC8F5C7)
     (at 22.4 146.2 60)
     (path /5BBA8AAC)
-    (fp_text reference D802 (at 6.35 1.27 60) (layer F.SilkS)
+    (fp_text reference D802 (at 6.35 1.27 60) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value TSUS4300 (at 7.62 -1.27 60) (layer F.Fab)
@@ -774,10 +774,10 @@
       (net 37 "Net-(D801-Pad1)"))
   )
 
-  (module circus_broadcast:TSUS4300 (layer F.Cu) (tedit 5BCCEA51) (tstamp 5BC8F5CE)
+  (module circus_broadcast:TSUS4300 (layer F.Cu) (tedit 5BE5FCFE) (tstamp 5BC8F5CE)
     (at 23.3 153.1 110)
     (path /5BBA8AA6)
-    (fp_text reference D803 (at 6.35 1.27 110) (layer F.SilkS)
+    (fp_text reference D803 (at 6.35 1.27 110) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value TSUS4300 (at 7.62 -1.27 110) (layer F.Fab)
@@ -789,10 +789,10 @@
       (net 38 "Net-(D802-Pad1)"))
   )
 
-  (module circus_broadcast:TSUS4300 (layer F.Cu) (tedit 5BCCEA4D) (tstamp 5BC8F5D5)
+  (module circus_broadcast:TSUS4300 (layer F.Cu) (tedit 5BE5FCF9) (tstamp 5BC8F5D5)
     (at 27.9 157.6 150)
     (path /5BBA8A8C)
-    (fp_text reference D804 (at 6.35 1.27 150) (layer F.SilkS)
+    (fp_text reference D804 (at 6.35 1.27 150) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value TSUS4300 (at 7.62 -1.27 150) (layer F.Fab)
@@ -804,10 +804,10 @@
       (net 39 "Net-(D803-Pad1)"))
   )
 
-  (module circus_agent:M20-9990345 (layer F.Cu) (tedit 5B4A2726) (tstamp 5BC8F5EA)
+  (module circus_agent:M20-9990345 (layer F.Cu) (tedit 5BE5FE4B) (tstamp 5BC8F5EA)
     (at 67.31 138.43 180)
     (path /5BB3FDDD)
-    (fp_text reference J402 (at -1.016 1.778 180) (layer F.SilkS)
+    (fp_text reference J402 (at 6.35 2.286 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value M20-9990345 (at 1.6 3.5 180) (layer F.Fab)
@@ -821,10 +821,10 @@
       (net 2 GND))
   )
 
-  (module circus_broadcast:LM317DCY (layer F.Cu) (tedit 5BC8F792) (tstamp 5BC8F949)
+  (module circus_broadcast:LM317DCY (layer F.Cu) (tedit 5BE5FC49) (tstamp 5BC8F949)
     (at 63.5 149.86)
     (path /5BB2B900)
-    (fp_text reference U201 (at 8.5 -5) (layer F.SilkS)
+    (fp_text reference U201 (at 2.286 -2.794) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value LM317DCY (at 10.2 -3.1) (layer F.Fab)
@@ -844,10 +844,10 @@
       (net 13 +3V3))
   )
 
-  (module circus_broadcast:LM317DCY (layer F.Cu) (tedit 5BC8F792) (tstamp 5BC8F96D)
+  (module circus_broadcast:LM317DCY (layer F.Cu) (tedit 5BE5FD32) (tstamp 5BC8F96D)
     (at 80.75 148.25 180)
     (path /5BBA44AD)
-    (fp_text reference U501 (at 8.5 -5 180) (layer F.SilkS)
+    (fp_text reference U501 (at -3.578 -2.118 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value LM317DCY (at 10.2 -3.1 180) (layer F.Fab)
@@ -867,10 +867,10 @@
       (net 16 "Net-(R501-Pad1)"))
   )
 
-  (module circus_broadcast:LM317DCY (layer F.Cu) (tedit 5BC8F792) (tstamp 5BC8F979)
+  (module circus_broadcast:LM317DCY (layer F.Cu) (tedit 5BE5FBFD) (tstamp 5BC8F979)
     (at 30.9 149.8)
     (path /5BB28D4A)
-    (fp_text reference U601 (at 8.5 -5) (layer F.SilkS)
+    (fp_text reference U601 (at -3.468 -0.702) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value LM317DCY (at 10.2 -3.1) (layer F.Fab)
@@ -890,10 +890,10 @@
       (net 18 "Net-(R601-Pad1)"))
   )
 
-  (module circus_broadcast:0603 (layer F.Cu) (tedit 5BC8FAC3) (tstamp 5BE0ACCC)
+  (module circus_broadcast:0603 (layer F.Cu) (tedit 5BE5FE63) (tstamp 5BE0ACCC)
     (at 70.485 152.4 180)
     (path /5BB2B921)
-    (fp_text reference C201 (at 5.1 -1.6 180) (layer F.SilkS)
+    (fp_text reference C201 (at 0.381 -1.778 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value "1uF, 16V" (at 4.9 0.3 180) (layer F.Fab)
@@ -905,10 +905,10 @@
       (net 19 +BATT))
   )
 
-  (module circus_broadcast:0603 (layer F.Cu) (tedit 5BC8FAC3) (tstamp 5BE0ACD2)
+  (module circus_broadcast:0603 (layer F.Cu) (tedit 5BE5FDAA) (tstamp 5BE0ACD2)
     (at 71.12 143.51 180)
     (path /5BB2B93D)
-    (fp_text reference C202 (at 5.1 -1.6 180) (layer F.SilkS)
+    (fp_text reference C202 (at 5.1 -1.6 180) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value "1uF, 6.3V" (at 4.9 0.3 180) (layer F.Fab)
@@ -920,10 +920,10 @@
       (net 13 +3V3))
   )
 
-  (module circus_broadcast:0603 (layer F.Cu) (tedit 5BC8FAC3) (tstamp 5BE0ACD8)
+  (module circus_broadcast:0603 (layer F.Cu) (tedit 5BE5FE58) (tstamp 5BE0ACD8)
     (at 71.12 158.75 270)
     (path /5BB2A72B)
-    (fp_text reference C301 (at 5.1 -1.6 270) (layer F.SilkS)
+    (fp_text reference C301 (at 3.556 1.016 360) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value "1uF, 16V" (at 4.9 0.3 270) (layer F.Fab)
@@ -935,10 +935,10 @@
       (net 19 +BATT))
   )
 
-  (module circus_broadcast:0603 (layer F.Cu) (tedit 5BC8FAC3) (tstamp 5BE0ACDE)
+  (module circus_broadcast:0603 (layer F.Cu) (tedit 5BE5FE66) (tstamp 5BE0ACDE)
     (at 60.96 153.035)
     (path /5BB2AE09)
-    (fp_text reference C302 (at 5.1 -1.6) (layer F.SilkS)
+    (fp_text reference C302 (at 4.826 -0.381) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value "1uF, 6.3V" (at 4.9 0.3) (layer F.Fab)
@@ -950,10 +950,10 @@
       (net 40 +5V))
   )
 
-  (module circus_broadcast:0603 (layer F.Cu) (tedit 5BC8FAC3) (tstamp 5BE0ACE4)
+  (module circus_broadcast:0603 (layer F.Cu) (tedit 5BE5FDA1) (tstamp 5BE0ACE4)
     (at 49.53 144.145 270)
     (path /5BB3CBD4)
-    (fp_text reference C401 (at 5.1 -1.6 270) (layer F.SilkS)
+    (fp_text reference C401 (at 5.1 -1.6 270) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value "1uF, 6.3V" (at 4.9 0.3 270) (layer F.Fab)
@@ -965,10 +965,10 @@
       (net 13 +3V3))
   )
 
-  (module circus_broadcast:0603 (layer F.Cu) (tedit 5BC8FAC3) (tstamp 5BE0ACEA)
+  (module circus_broadcast:0603 (layer F.Cu) (tedit 5BE5FC43) (tstamp 5BE0ACEA)
     (at 74.295 145.415 270)
     (path /5BBA44B9)
-    (fp_text reference C501 (at 5.1 -1.6 270) (layer F.SilkS)
+    (fp_text reference C501 (at -1.905 -1.905 360) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value "1uF, 16V" (at 4.9 0.3 270) (layer F.Fab)
@@ -980,10 +980,10 @@
       (net 19 +BATT))
   )
 
-  (module circus_broadcast:0603 (layer F.Cu) (tedit 5BC8FAC3) (tstamp 5BE0ACF0)
+  (module circus_broadcast:0603 (layer F.Cu) (tedit 5BE5FC08) (tstamp 5BE0ACF0)
     (at 35.56 153.67 90)
     (path /5BB29446)
-    (fp_text reference C601 (at 5.1 -1.6 90) (layer F.SilkS)
+    (fp_text reference C601 (at -1.524 0.762 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value "1uF, 16V" (at 4.9 0.3 90) (layer F.Fab)
@@ -995,10 +995,10 @@
       (net 19 +BATT))
   )
 
-  (module circus_broadcast:Keystone2238 (layer F.Cu) (tedit 5BDF5371) (tstamp 5BE0ACF6)
+  (module circus_broadcast:Keystone2238 (layer F.Cu) (tedit 5BE5FE7C) (tstamp 5BE0ACF6)
     (at 55.88 152.4)
     (path /5BC6E33A)
-    (fp_text reference J101 (at -2.7 4) (layer F.SilkS)
+    (fp_text reference J101 (at 1.27 -1.524) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value Keystone2238 (at -2.5 -5.9) (layer F.Fab)
@@ -1010,10 +1010,10 @@
       (net 19 +BATT))
   )
 
-  (module circus_broadcast:TestPoint (layer F.Cu) (tedit 5BC8F940) (tstamp 5BE0AD00)
+  (module circus_broadcast:TestPoint (layer F.Cu) (tedit 5BE5FC66) (tstamp 5BE0AD00)
     (at 59.055 148.59)
     (path /5BB4397D)
-    (fp_text reference T101 (at 3.3 1.3) (layer F.SilkS)
+    (fp_text reference T101 (at -1.143 -1.778) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value TestPoint (at 4.4 -1.5) (layer F.Fab)
@@ -1023,10 +1023,10 @@
       (net 19 +BATT))
   )
 
-  (module circus_broadcast:TestPoint (layer F.Cu) (tedit 5BC8F940) (tstamp 5BE0AD05)
+  (module circus_broadcast:TestPoint (layer F.Cu) (tedit 5BE5FC61) (tstamp 5BE0AD05)
     (at 53.34 150.495)
     (path /5BB4176C)
-    (fp_text reference T401 (at 3.3 1.3) (layer F.SilkS)
+    (fp_text reference T401 (at 0.508 -1.905) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value TestPoint (at 4.4 -1.5) (layer F.Fab)
@@ -1036,10 +1036,10 @@
       (net 41 "Net-(T401-Pad1)"))
   )
 
-  (module circus_broadcast:TestPoint (layer F.Cu) (tedit 5BC8F940) (tstamp 5BE0AD0A)
+  (module circus_broadcast:TestPoint (layer F.Cu) (tedit 5BE5FE3E) (tstamp 5BE0AD0A)
     (at 56.515 141.605)
     (path /5BB41675)
-    (fp_text reference T402 (at 3.3 1.3) (layer F.SilkS)
+    (fp_text reference T402 (at -0.635 -1.651) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value TestPoint (at 4.4 -1.5) (layer F.Fab)
@@ -1049,10 +1049,10 @@
       (net 42 "Net-(T402-Pad1)"))
   )
 
-  (module circus_broadcast:M20-9990445 (layer F.Cu) (tedit 5BE0AFAD) (tstamp 5BE0BBAB)
+  (module circus_broadcast:M20-9990445 (layer F.Cu) (tedit 5BE5FE45) (tstamp 5BE0BBAB)
     (at 44.45 138.43)
     (path /5BE0DCD3)
-    (fp_text reference J401 (at -3.4 -0.3) (layer F.SilkS)
+    (fp_text reference J401 (at 6.096 -2.286) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value M20-9990445 (at 0.7 3.5) (layer F.Fab)
@@ -1071,14 +1071,8 @@
   (gr_text "RevA Nov 2018" (at 59.944 146.558) (layer B.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
-  (gr_text "RevA Nov 2018" (at 65.278 146.304) (layer F.Cu)
-    (effects (font (size 1.5 1.5) (thickness 0.3)))
-  )
   (gr_text Broadcast (at 62.992 144.018) (layer B.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
-  )
-  (gr_text Broadcast (at 66.802 144.272) (layer F.Cu)
-    (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
   (gr_text Circus (at 65.024 141.732) (layer B.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
